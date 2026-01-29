@@ -1,3 +1,11 @@
-touch - touch cms is used to create an empty file 
+linux command
 
-        ![alt text](image.png)
+touch - used to create empty file 
+
+
+![alt text](image-1.png)
+
+
+
+
+        
