@@ -1,5 +1,7 @@
 # Day 06 Task – Linux Fundamentals: Read and Write Text Files
 
+---
+
 ## touch 
 - `used to create empty file `
 
