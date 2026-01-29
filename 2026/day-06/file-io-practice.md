@@ -1,7 +1,7 @@
 # Day 06 Task – Linux Fundamentals: Read and Write Text Files
 
 ## touch 
-- used to create empty file 
+- `used to create empty file `
 
 ![alt text](images/image.png)
 ---
