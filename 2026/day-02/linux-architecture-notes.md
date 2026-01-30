@@ -45,7 +45,7 @@
     - `systemctl start ssh: it will start ssh service`
     - `systemctl stop ssh: it will stop ssh service`
     - `systemctl enable ssh: it will start ssh service automatically after server boot`
-    - `systemctl status ssh : it will restart ssh service`
+    - `systemctl restart ssh : it will restart ssh service`
     - `systemctl list-units : it will show all active units loaded in systemd`
     - `journalctl -u ssh : it will used to see a logs of systemd processes`
 
