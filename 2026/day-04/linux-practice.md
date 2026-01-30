@@ -19,7 +19,7 @@
 
 - `systemctl list-units`
 
-<video controls src="/2026/day-04/images/20260130-1003-58.8580544.mp4" title="Title"></video>
+![alt text](images/image5.png)
 
 - `journalctl`
 
