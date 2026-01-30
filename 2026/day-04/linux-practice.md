@@ -11,7 +11,7 @@
 
 ![alt text](images/image1.png)
 
-## Sysyemd commands 
+## Systemd commands 
 
 - `systemctl status`
 
@@ -19,7 +19,7 @@
 
 - `systemctl list-units`
 
-<video controls src="images/20260130-1003-58.8580544.mp4" title="Title"></video>
+<video controls src="/2026/day-04/images/20260130-1003-58.8580544.mp4" title="Title"></video>
 
 - `journalctl`
 
