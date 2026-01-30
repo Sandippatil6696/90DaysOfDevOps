@@ -22,7 +22,7 @@
 - `mkdir    : to create a directory`
 - `rm -r    : to delete directory`
 - `cp       : to copy from file1 to file2`
-- `mv       : to move from one directory to other or file1 to file2 or tpo rename file `
+- `mv       : to move from one directory to other or file1 to file2 or to rename file `
 
 ---
 
