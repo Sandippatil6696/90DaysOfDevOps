@@ -18,25 +18,25 @@
 
 --- 
 
-## Process & Process manegement 
+## Process & Process Manegement 
 - Everything in linux is processes ,even a cmd executed by user is process .
     - `a cmd enter by user on shell`
     - `shell  calls forks() & created a child process`
     - `child process calls exec()`
     - `kernel schedule it for execution`
-- some of process states as follow 
-    - `Running : process is running`
+- Some of process states as follow 
+    - `Running : process is running on cpu`
     - `Sleeping : waiting for i/o`
     - `Zombie : process is finished but not cleaned`
-- some of important commands for process manegement are as follow 
-    `top: its shows all process used to monitor & troubleshoot`
-    `htop: you can horizontally & vertically scroll all process`
-    `ps -a : is used to display all process ` 
-    `kill -9 PID: forcefully terminate a process`
+- Some of important commands for process manegement are as follow 
+    - `top: its shows all process used to monitor & troubleshoot`
+    - `htop: you can horizontally & vertically scroll all process`
+    - `ps -a : is used to display all process ` 
+    - `kill -9 PID: forcefully terminate a process`
 
 ---
 
-## systemd/init
+## Systemd/init Process
 
 - It is a first process lanuched by kernal ,its pid is always 1 
 - It is responsible for starting system service 
