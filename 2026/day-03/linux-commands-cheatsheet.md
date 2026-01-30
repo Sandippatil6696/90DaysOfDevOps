@@ -1,4 +1,4 @@
-# Day 03 – Linux Commands Practice
+# Day 03 Task – Linux Commands Practice
 
 --- 
 
