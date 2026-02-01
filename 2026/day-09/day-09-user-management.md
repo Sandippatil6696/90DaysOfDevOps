@@ -8,6 +8,8 @@
 
 ![alt text](/2026/day-09/Images/image.png)
 
+- `create user with default shell bash`
+
 ![alt text](/2026/day-09/Images/image-1.png)
 
 - `check users`
