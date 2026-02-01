@@ -21,7 +21,7 @@
 ![alt text](/2026/day-09/Images/image-2.png)
 
 
-# ask 2: Create Groups
+# Task 2: Create Groups
 
 - `create group`
 
