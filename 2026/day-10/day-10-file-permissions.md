@@ -16,27 +16,27 @@
 
 # Understand Permissions
 - notes.txt has permission as below 
-    user- read ,write
-    group - read ,write
-    other - read 
+    - user- read ,write
+    - group - read ,write
+    - other - read 
 
 ![alt text](images/image-4.png)
 
 # Modify Permissions
 
--1 Make script.sh executable
+- Make script.sh executable
 
 ![alt text](images/image-5.png)
 
-- 2 Set devops.txt to read-only for all 
+- Set devops.txt to read-only for all 
 
 ![alt text](images/image-6.png)
 
-- 3 Set notes.txt to 640
+- Set notes.txt to 640
 
 ![alt text](images/image-7.png)
 
--4 Create directory project/ with permissions 755
+- Create directory project/ with permissions 755
 
 ![alt text](images/image-8.png)
 
@@ -47,6 +47,6 @@
 - i am not able to execute a file without +x permission even execute with sudo 
 
 
-# trying to enter home directory of other user 
-- if ubuntu user has permission rwx-r-x-r-- & i am trying to using other user then i am not able to cd ,ls to ubuntu user home     directory still other user has read permission 
-- you have need to given r-w permission to other to enter ubuntu user home directory
+# Trying to enter home directory of other user 
+- If ubuntu user has permission rwx-r-x-r-- & i am trying to enter ubuntu user home diretory by other user then i am not able to cd ,ls to ubuntu user home directory still other user has read permission 
+- you have need to given a r-w permission to other to enter ubuntu user home directory
