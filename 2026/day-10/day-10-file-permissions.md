@@ -8,7 +8,7 @@
 
 # Read files 
 
-- read file using cat & vim editor
+- Read file using cat & vim editor
 
 ![alt text](images/image-2.png)
 
@@ -44,7 +44,7 @@
 - I am still able to edit a read only file because i am created a file using ubuntu user so file owner has still permission to edit if it read only
 
 # Try executing a file without execute permission
-- i am not able to execute a file without +x permission even execute with sudo 
+- I am not able to execute a file without +x permission even execute with sudo 
 
 
 # Trying to enter home directory of other user 
