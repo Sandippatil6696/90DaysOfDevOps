@@ -2,46 +2,46 @@
 
 ---
 
-# `/ directory `
+`/ directory `
 
 - it is the root directory & everying is inside / directory`
 
-# /`home `
+/`home `
 
 - home directory for normal user user`
 - it conatins user folder inside home directory
 
 
-# `/root ` or `~`
-- it is home directory for root user conatins .bashrc , .bash_history ,.ssh 
+`/root ` or `~`
+- it is home directory for root user contains .bashrc , .bash_history ,.ssh 
 - it contains .ssh file which contains authorised key file in which we have add a public key of other user 
 - it also conatins .bashrc file which is used to add root user level alias 
 
 
-# `/etc `
+`/etc `
 - it contains system configuration file`
 - it contains passwd , group , shadow ,hosts files 
 
-# `/var`
+`/var`
 - its contains log folder which contains system & application logs 
 - it aslo conatins mail folder 
 
-# `/tmp`
+`/tmp`
 - it contains termparary files & be auto cleaned on reboot 
 
-# `/bin`
+`/bin`
 - it contains system cmds for system boot & recovey cmds
 
-# `usr/bin`
+`usr/bin`
 - it contains user cmds
 
-# `/opt`
+`/opt`
 - install external applications inside this directory 
 
-# `/mount`
+`/mount`
 - is used to tempararily mount external storage blocks 
 
-# `/media`
+`/media`
 - it will shows external connected device files 
 
 --- 
@@ -86,8 +86,8 @@
 **High CPU Usage**
 - Step 1 - run cmd top ,htop for checking which process taking max cpu %
 - step 2 - sort the process which taking maximum cpu % 
-- step 3 - mark a processid & monitor that process 
-- step 4 - if that process is not necessary the kill process 
+- step 3 - mark a process id & monitor that process 
+- step 4 - if that process is not necessary , kill the process 
 
 ![alt text](images/image-1.png)
 
