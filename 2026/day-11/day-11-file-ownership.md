@@ -9,8 +9,7 @@
 `group`
 - In a group there is multiple user 
 - group permission apply to all user inside that group except owner 
-
-**Format: -rw-r--r-- 1 owner group size date filename**
+- **Format: -rw-r--r-- 1 owner group size date filename**
 - 1 represent number of hardlink
 
 ![alt text](images/image.png)
