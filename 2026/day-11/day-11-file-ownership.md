@@ -31,8 +31,8 @@
 
 # Combined Owner & Group Change
 
-- Craeted a file project-config.yaml & check owener & group 
-- Changed owner to professor AND group to heist-team
+- Created a file project-config.yaml & check owner & group 
+- Changed owner to professor and group to heist-team
 
 ![alt text](images/image-3.png)
 
@@ -46,7 +46,7 @@
 - Created a recursive directory & Check group & owner 
 - Created a group planners
 - Changed ownership of entire heist-project/ directory recursively 
-- & verify its owener & group with `ls -lR heist-project/` 
+- & verify its owner & group with `ls -lR heist-project/` 
 
 ![alt text](images/image-6.png)
 
