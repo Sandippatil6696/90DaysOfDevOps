@@ -90,21 +90,21 @@
 
 # Now extend a logical volume 
 
-- Extend a logical volume by ruuning below cmd & run lsblk this will show increased size of lv 
-    `lvextend -L +2G /dev/devops-vg/app-data`
+- Extend a logical volume by running below cmd & run lsblk this will show increased size of lv 
+    - `lvextend -L +2G /dev/devops-vg/app-data`
 - Run below cmd to resize file system without these command it will show old file system 
-    `resize2fs /dev/devops-vg/app-data`
+    - `resize2fs /dev/devops-vg/app-data`
 - To check disk space 
-    `df -h /mnt/app-data`
+    - `df -h /mnt/app-data`
 
 ![alt text](images/image-14.png)
 
 # To unmount disk 
-- unmoun disk 
-`umount /mnt/app-data`
+- unmount disk 
+    - `umount /mnt/app-data`
 
 - if you facing any issue while unmount run these command You’ll see PIDs and which users/processes are holding it.
-`sudo lsof +D /mnt/app-data`
+    - `sudo lsof +D /mnt/app-data`
 
 ![alt text](images/image-15.png)
 
@@ -141,7 +141,7 @@
 
 - You can aslo unmount pv block 
 
-`umount /mnt/app-data1`
+- `umount /mnt/app-data1`
 
 --- 
 
