@@ -41,19 +41,19 @@
 
 - You need to create a physical volume of all these attached block 
 - run commands these cmd created 3 physical volume for 3 blocks 
-`lvm - to route to linux volume maneger`
-`pvcreate blocks_names - - used to create physical volume`
-`pvcreate /dev/nvme1n1 /dev/nvme2n1 /dev/nvme3n1 `
-`pvs - to display physical volume`
+    - `lvm - to route to linux volume maneger`
+    - `pvcreate blocks_names - - used to create physical volume`
+    - `pvcreate /dev/nvme1n1 /dev/nvme2n1 /dev/nvme3n1 `
+    - `pvs - to display physical volume`
     
    ![alt text](images/image-7.png)
 
 # Create Volume Group
 
 - Run commands to create volume group 
-`vgcreate groupname disknames - used to create volume group`
-`vgcreate devops-vg /dev/nvme1n1 /dev/nvme2n1`
-`vgs - used to display volume group`
+    - `vgcreate groupname disknames - used to create volume group`
+    - `vgcreate devops-vg /dev/nvme1n1 /dev/nvme2n1`
+    - `vgs - used to display volume group`
 - here i want to create a volume group of two blocks only 
 - you can create a vg of any number of blocks i.e 1 or 2 or any 
 
