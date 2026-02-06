@@ -154,7 +154,7 @@
      ↓     ↓
     Lv1   LV2  ... Logical volume3 
 
-    ![alt text](images/image18.png)
+    ![alt text](images/image20.png)
 
 - You can unmount these block 
 
