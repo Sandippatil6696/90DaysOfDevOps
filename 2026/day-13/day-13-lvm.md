@@ -42,7 +42,6 @@
 - You need to create a physical volume of all these attached block 
 - run commands these cmd created 3 physical volume for 3 blocks 
     - `lvm - to route to linux volume maneger`
-    - `pvcreate blocks_names - - used to create physical volume`
     - `pvcreate /dev/nvme1n1 /dev/nvme2n1 /dev/nvme3n1 `
     - `pvs - to display physical volume`
     
