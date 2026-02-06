@@ -51,7 +51,6 @@
 # Create Volume Group
 
 - Run commands to create volume group 
-    - `vgcreate groupname disknames - used to create volume group`
     - `vgcreate devops-vg /dev/nvme1n1 /dev/nvme2n1`
     - `vgs - used to display volume group`
 - here i want to create a volume group of two blocks only 
@@ -61,12 +60,12 @@
 
 # Create Logical Volume
 
-- `lvcreate lvname vgname - format`
 - `lvcreate -L 6G -name app-data devops-vg`
 
 ![alt text](images/image-9.png)
 
 # Format a logical volume 
+
 - `mkfs.ext4 /dev/devops-vg/app-data`
 
 ![alt text](images/image-10.png)
@@ -155,6 +154,9 @@
      ↓     ↓
     Lv1   LV2  ... Logical volume3 
 
+    ![alt text](images/image18.png)
+
 - You can unmount these block 
 
 - After unmount data will not be lost if we mount again data wiil be there 
+
