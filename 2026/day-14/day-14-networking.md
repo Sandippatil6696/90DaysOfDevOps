@@ -66,10 +66,11 @@
 - Identity `hostname -I or ip addr show`
 
     - Obesevations: 
-                - **hostname -I** it shows private ip & is 172.31.47.45 & 2nd is virtual network interface 172.17.0.1
-                - **ip addr show**  - it shows localhost address i.e 127.0.0.1/8 
-                                    - Ethernet ip i.e 172.31.47.45/20 
-                                    - & for docker virtual interface i.e 172.31.47.45/20
+        - **hostname -I** it shows private ip & is 172.31.47.45 & 2nd is virtual network interface 172.17.0.1
+        - **ip addr show**  
+            - it shows localhost address i.e 127.0.0.1/8 
+            - Ethernet ip i.e 172.31.47.45/20 
+            - & for docker virtual interface i.e 172.31.47.45/20
   
 
 ![alt text](images/image-3.png)
@@ -150,9 +151,9 @@
 - Followups
 
     - use telnet command to check connectivity to host server and port
-    `telnet ip port`
+        - `telnet ip port`
 
     - use netstat command to see a connection is established or not 
-    `netstat -an |grep ip or port`
+        - `netstat -an |grep ip or port`
     
 
