@@ -20,6 +20,8 @@
 
 ![alt text](images/image-2.png)
 
+![alt text](images/image6.png)
+
 # If-Else Conditions
 
 - `Check number s posve or negative`
