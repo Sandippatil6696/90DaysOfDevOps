@@ -38,7 +38,7 @@
 
 ![alt text](images/image-5.png) 
 
-# learning
+# Learning
 - read -p is used to take input from user 
 - -f used to check file exits or not 
 - --no-pager use case 
