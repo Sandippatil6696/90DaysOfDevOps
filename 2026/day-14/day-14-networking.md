@@ -64,7 +64,6 @@
 # Hands-on Checklist
 
 - Identity `hostname -I or ip addr show`
-
     - Obesevations: 
         - **hostname -I** it shows private ip & is 172.31.47.45 & 2nd is virtual network interface 172.17.0.1
         - **ip addr show**  
