@@ -38,5 +38,6 @@
 
 - If `mkdir -p` is used it will create directory if not exists 
 - If `touch` is used to create file if file already exits it will only update timestamp 
+- set -e explictly exits fro m script when error occur
 
 ![alt text](images/image-6.png)
