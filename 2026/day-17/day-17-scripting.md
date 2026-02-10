@@ -23,6 +23,8 @@
 
 ![alt text](images/image-3.png)
 
+![alt text](images/image10.png)
+
 # Install Packages via Script
 
 - Installing a list of packages 
