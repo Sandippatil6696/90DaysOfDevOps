@@ -19,7 +19,7 @@
         - IN - internet 
         - A -  142.251.220.78 (i.e IPV4 address)
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 
 #  IP Addressing 192.168.1.10
@@ -41,7 +41,7 @@
 - `172.16.0.0 – 172.31.255.255` - 172.16.0.0/12
 - `192.168.0.0 – 192.168.255.255` - 192.168.0.0/16
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 - This is my private ip 172.31.47.45
 
 # CIDR & Subnetting
@@ -88,7 +88,7 @@
 
 - port 22 listening for ssh service & 80 htttp 
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 
 # 
