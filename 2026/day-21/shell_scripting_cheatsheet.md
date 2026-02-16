@@ -26,9 +26,9 @@
 
 - **Variables — declaring, using, and quoting ($VAR, "$VAR", '$VAR')**
 
-- $VAR - will print value of variabele
-- "$VAR" - Will also print value of variable
-- '$VAR' - will print 'value of variable inside single quote'
+    - $VAR - will print value of variabele
+    - "$VAR" - Will also print value of variable
+    - '$VAR' - will print 'value of variable inside single quote'
 
 ![alt text](images/image-2.png)
 
