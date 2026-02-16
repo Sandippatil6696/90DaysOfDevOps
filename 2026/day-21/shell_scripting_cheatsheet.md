@@ -50,9 +50,9 @@
     - $@ : print all argument
     - $? " check o/p of last cmd 0- success 1 - failed 
 
-    ![alt text](images/image-6.png)
+![alt text](images/image-6.png)
 
-    ![alt text](images/image-7.png)
+![alt text](images/image-7.png)
 
 # Operators and Conditionals
 
@@ -60,27 +60,27 @@
 
     - `=` : it return true if  string value matches 
 
-    ![alt text](images/image-8.png)
+![alt text](images/image-8.png)
 
-    ![alt text](images/image-9.png)
+![alt text](images/image-9.png)
 
     - `!=` : it return true if string value does not match
 
-    ![alt text](images/image-10.png)
+![alt text](images/image-10.png)
 
-    ![alt text](images/image-11.png)
+![alt text](images/image-11.png)
 
     - `-z` : it returns true if string is empty 
 
-    ![alt text](images/image-12.png)
+![alt text](images/image-12.png)
 
-    ![alt text](images/image-13.png)
+![alt text](images/image-13.png)
     
     - `-n` : it returns true if string is not empty
 
-    ![alt text](images/image-14.png)
+![alt text](images/image-14.png)
 
-    ![alt text](images/image-15.png)
+![alt text](images/image-15.png)
 
 - **Integer comparisons : -eq, -ne, -lt, -gt, -le, -ge**
 
@@ -92,19 +92,19 @@
 
     `-f` : it return true if file exits 
 
-    ![alt text](images/image-18.png)
+![alt text](images/image-18.png)
 
-    ![alt text](images/image-19.png)
+![alt text](images/image-19.png)
 
     `-d` : it return true if directory exits
 
-    ![alt text](images/image-20.png)
+![alt text](images/image-20.png)
 
-    ![alt text](images/image-21.png)
+![alt text](images/image-21.png)
 
     -`-e` : it returns true if file or directory exits 
 
-    ![alt text](images/image-22.png)
+![alt text](images/image-22.png)
 
     ![alt text](images/image-23.png)
 
@@ -166,15 +166,15 @@
 
     - `continue : it will skip the loop at that particular condition`
 
-    ![alt text](images/image-40.png)
+![alt text](images/image-40.png)
 
-    ![alt text](images/image-39.png)
+![alt text](images/image-39.png)
 
-    -`break : it will break the when condition meets`
+    - `break : it will break the when condition meets`
 
-    ![alt text](images/image-41.png)
+![alt text](images/image-41.png)
 
-    ![alt text](images/image-42.png)
+![alt text](images/image-42.png)
 
 - **Looping over files — for file in *.log**
 
@@ -203,31 +203,31 @@
     - `-i: case insensitive`
         - `grep -i 'info' zookeeper.log |tail -5`
 
-    ![alt text](images/image-49.png)
+![alt text](images/image-49.png)
 
     - `-r: this will search word inside directory/sub direcory`
         - ` grep -r 'hellow' /home/ubuntu/`
 
-    ![alt text](images/image-50.png)
+![alt text](images/image-50.png)
 
     - `-c : this will count word `
         - `grep  -c 'info' zookeeper.log`
 
-    ![alt text](images/image-51.png)
+![alt text](images/image-51.png)
 
     - `-n : this will print number of line`
         - `grep  -ni 'info' zookeeper.log |tail -2`
-    ![alt text](images/image-52.png)
+![alt text](images/image-52.png)
 
     - `-v : this will print invert `
         - `grep  -vi 'info' zookeeper.log |tail -2`
 
-    ![alt text](images/image-53.png)
+![alt text](images/image-53.png)
 
     - `E : regular exression`
         - `grep  -E 'INFO|ERROR' zookeeper.log |tail -5`
 
-    ![alt text](images/image-54.png)
+![alt text](images/image-54.png)
 
 - **awk — print columns, field separator, patterns, BEGIN/END**
 
@@ -242,35 +242,35 @@
 
     - `substitution & in-place edit`
 
-    ![alt text](images/image-56.png)
+![alt text](images/image-56.png)
 
-    ![alt text](images/image-57.png)
+![alt text](images/image-57.png)
 
     - `delete lines`
 
-    ![alt text](images/image-58.png)
+![alt text](images/image-58.png)
 
 - **cut — extract columns by delimiter**
 
     - `cut -d ' ' -f1 zookeeper.log |tail -3 `
 
-    ![alt text](images/image-59.png)
+![alt text](images/image-59.png)
 
 - **sort uniq ,reverse  — alphabetical, numerical, reverse, unique**
 
     - ` awk '{print $4}' zookeeper.log |sort |uniq -c |sort -nrk1`
 
-    ![alt text](images/image-60.png)
+![alt text](images/image-60.png)
 
 - **tr — translate/delete characters**
 
     - `Transalate`
 
-    ![alt text](images/image-61.png)
+![alt text](images/image-61.png)
 
     - `delete`
 
-    ![alt text](images/image-62.png)
+![alt text](images/image-62.png)
 
 - **wc - line/word/char count**
 
@@ -278,7 +278,7 @@
     - `word count : wc -w zookeeper.log`
     - `Character count: wc -c zookeeper.log`
 
-    ![alt text](images/image-64.png)
+![alt text](images/image-64.png)
 
 
 **head / tail — first/last N lines, follow mode**
@@ -295,7 +295,7 @@
 
     - `find /home/ubuntu/devops/scripts -type f -mtime +8 -delete`
 
-    ![alt text](images/image-67.png)
+![alt text](images/image-67.png)
 
 
 
@@ -303,13 +303,13 @@
 
     - `wc -l *.log`
 
-    ![alt text](images/image-66.png)
+![alt text](images/image-66.png)
 
 - **Replace a string across multiple files**
 
     - `sudo find /home/ -type f -exec 's/12457/zewyfsde12hfgt458/g' {} +'`
 
-    ![alt text](images/image-68.png)
+![alt text](images/image-68.png)
 
 - **Check if a service is running**
 
