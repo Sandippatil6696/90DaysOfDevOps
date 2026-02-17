@@ -154,7 +154,7 @@
         `git remote set-url origin https://<token>@github.com/Sandippatil6696/git-demo-repo.git`
 
 
-    3. By using gitub username & password 
+    3. **By using gitub username & password** 
 
         - if your origin  url is set on https & you want to push to remote repo git asking for username & password 
 
