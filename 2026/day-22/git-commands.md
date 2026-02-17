@@ -80,19 +80,31 @@
 
 `git branch`
 
+- To create a branch 
+
+`git branch <name>`
+
+- To create a branch & checkout to that branch
+
+`git branch -b <branchname>`
+
 - To switch/checkout to branch
 
 `git switch <branchname>`
 
 `git checkout <branchname>`
 
-- To create a branch & checkout to that branch
+- To rename branch (master -> main)
 
-`git branch -b <branchname>`
-
-- To rename branch 
+`git switch master`
 
 `git branch -m main`
+
+- To delete branch 
+
+`git branch -d <branchname>`
+
+
 
 ---
 
@@ -105,6 +117,11 @@
 - To add remote repository to your origin 
 
 `git remote add origin git@github.com:Sandippatil6696/git-demo-repo.git`
+
+- To remove remote repo 
+
+`git remote remove origin`
+
 
 ---
 
@@ -133,6 +150,10 @@
             - if your local & remote branch have commit history then you have to merge or rebase or fast-forward
 
         `git pull --rebase origin main`
+
+        `git pull --ff-only origin main`
+
+        `git pull --no-rebase origin main`
 
         `git push origin main`
     
@@ -163,7 +184,13 @@
 
         - by passing username & password you will be able to push /pull 
 
-     
+# Clone & fork 
+
+- To copy a remote git repository to your local System 
+
+`git clone <repo url>`
+
+
 
 
 
