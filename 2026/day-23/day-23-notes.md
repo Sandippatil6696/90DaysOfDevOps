@@ -8,6 +8,8 @@
 - head is pointer & points to your current branch commit
 - if we switch branch you will see a current branch working directory files
 
+---
+
 # Branching Commands
 
 - List all branches 
@@ -36,6 +38,7 @@
 
 ![alt text](images/image-5.png)
 
+---
 
 # Push to GitHub
 
@@ -73,10 +76,14 @@
 
 ![alt text](images/image-12.png)
 
+---
+
 # difference between origin and upstream?
 
 - `origin :` when you clone repository git gives default name **origin** to remote repository
 - `upstram :` when you fork repository git gives names to main repository as upstream & your fork repo as origin on local 
+
+---
 
 # Pull from GitHub
 
@@ -92,6 +99,7 @@
 
     - `git fetch :`
 
+--- 
 
 # Clone vs Fork
 
