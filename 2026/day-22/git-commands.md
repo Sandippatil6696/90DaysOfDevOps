@@ -23,6 +23,7 @@
 `git config user.name`
 
 `git config user.email`
+
 ---
 
 # Basic Workflow 
@@ -70,6 +71,7 @@
 - To restore file 
 
 `git restore <file>`
+
 ---
 
 # Branch
@@ -91,6 +93,7 @@
 - To rename branch 
 
 `git branch -m main`
+
 ---
 
 # Remote Repo 
@@ -102,6 +105,7 @@
 - To add remote repository to your origin 
 
 `git remote add origin git@github.com:Sandippatil6696/git-demo-repo.git`
+
 ---
 
 # Push /pull from local/remote repo
