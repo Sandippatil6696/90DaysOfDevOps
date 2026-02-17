@@ -125,7 +125,7 @@
 
 ---
 
-# Push /pull from local/remote repo
+# Push /Pull from local/remote repo
 
 - **There are three ways to pull push from local to remote**
 
