@@ -78,7 +78,7 @@
 
 ---
 
-# difference between origin and upstream?
+# Difference between origin and upstream?
 
 - `origin :` when you clone repository git gives default name **origin** to remote repository
 - `upstram :` when you fork repository git gives names to main repository as upstream & your fork repo as origin on local 
