@@ -1,4 +1,4 @@
-# Git cheatsheet
+# Git Cheatsheet
 
 # Setup & Config
 
@@ -104,6 +104,31 @@
 
 `git branch -d <branchname>`
 
+- To merge branch feature -> main
+
+    - **if there is no any new commit on main branch after creation of branch feature It will do a fast-forward merge**
+    - **if there is any new commit on main branch after creation of branch feature It will do a  merge commit**
+
+`git switch main`
+
+`git merge feature`
+
+- Rebase to make single liner commit history of branch on the top of another branch i.e feature on main 
+
+`git checkout feature`
+`git rebase main`
+
+- Stash - to hide working file if you working on multiple file & you want to  commit only completed file then for uncompleted files you can stash
+
+`git stash`
+
+- To hide untracked files 
+
+`git stash -u`
+
+- To unhide 
+
+`git stash pop`
 
 
 ---
@@ -189,6 +214,9 @@
 - To copy a remote git repository to your local System 
 
 `git clone <repo url>`
+
+
+# 
 
 
 
