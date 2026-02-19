@@ -40,11 +40,11 @@
 
 **git revert**
     
-    - git revert the commit but stil shows in commit history 
+- git revert the commit but stil shows in commit history 
 
 **git reset**
 
-    - git reset used to remove commit history along with changes 
+- git reset used to remove commit history along with changes 
 
 # Reset vs Revert — Summary
 
@@ -67,11 +67,11 @@ develop (multiple intergration branches merge code in develop branch)
   ↑
 feature/*  (for adding New features)
 
-    - *hotfix branches*
+- *hotfix branches*
 
-    - used to fix production issue 
+- used to fix production issue 
 
-    - *user for large teams*
+- *user for large teams*
 
 - *GitHub Flow simple, single main branch + feature branches*
 
@@ -79,7 +79,7 @@ main
   ↑ PR → merge → deploy
 feature-branch 
 
-    - Used by those companies which have continuous deployment on GitHub
+- Used by those companies which have continuous deployment on GitHub
 
 - *Trunk-Based Development — everyone commits to main, short-lived branches*
 
@@ -87,15 +87,18 @@ main (trunk)
   ↑
 short-lived feature branches 
 
-    - short live branches frequently merge into main branch 
+- short live branches frequently merge into main branch 
 
-    - used for mostly Microservices , devops teams etc 
+- used for mostly Microservices , devops teams etc 
 
 *Which strategy would you use for a startup shipping fast?*
-    - Trunk-Based Development or github flow 
+- Trunk-Based Development or github flow 
 
 *Which strategy would you use for a large team with scheduled releases?*
-    - git flow
+- git flow
 
 
 # Git Commands Reference Update
+
+
+- [Git_cheatsheet](https://github.com/Sandippatil6696/90DaysOfDevOps/blob/b6cdaae2efa7641154040c6f37730046b46e0d50/2026/day-22/git-commands.md)
