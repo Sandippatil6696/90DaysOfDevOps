@@ -6,13 +6,17 @@
 
 - Make 3 commits
 
-    ![alt text](images/image.png)
+    ![alt text](image.png)
+
+
 
 - Use **git reset --soft** to go back one commit — what happens to the changes?
 
 - you go back to one commit and that commit reverse back to stagging area 
 
     ![alt text](images/image-2.png)
+
+
 
 - Re-commit, then use **git reset --mixed** to go back one commit — what happens now?
 
