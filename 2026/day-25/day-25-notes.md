@@ -6,7 +6,7 @@
 
 - Make 3 commits
 
-![alt text](images/image.png)
+![alt text](image.png)
 
 - Use **git reset --soft** to go back one commit — what happens to the changes?
 
