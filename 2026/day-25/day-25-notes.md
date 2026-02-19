@@ -6,28 +6,28 @@
 
 - Make 3 commits
 
-![alt text](images/image.png)
+    ![alt text](images/image.png)
 
 
 - Use **git reset --soft** to go back one commit — what happens to the changes?
 
 - you go back to one commit and that commit reverse back to stagging area 
 
-![alt text](images/image-2.png)
+  ![alt text](images/image-2.png)
 
 
 - Re-commit, then use **git reset --mixed** to go back one commit — what happens now?
 
 - you go back to one commit & that commit changes reverse go back to untracked area 
 
-![alt text](images/image-1.png)
+  ![alt text](images/image-1.png)
 
 
 - re-commit, then use **git reset --hard** to go back one commit — what happens this time?
 
 - you go back to one commit & it removes changes also 
 
-![alt text](images/image-3.png)
+  ![alt text](images/image-3.png)
 
 
 # Git Revert
@@ -36,7 +36,7 @@
 - Revert commit Y 
 - but still y commit revert history in log
 
-![alt text](images/image-4.png)
+  ![alt text](images/image-4.png)
 
 
 
@@ -104,4 +104,4 @@ short-lived feature branches
 
 # Git Commands Reference Update
 
-![Git_cheatsheet](https://github.com/Sandippatil6696/90DaysOfDevOps/blob/b6cdaae2efa7641154040c6f37730046b46e0d50/2026/day-22/git-commands.md)
+- ![Git_cheatsheet](https://github.com/Sandippatil6696/90DaysOfDevOps/blob/b6cdaae2efa7641154040c6f37730046b46e0d50/2026/day-22/git-commands.md)
