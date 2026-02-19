@@ -6,7 +6,7 @@
 
 - Make 3 commits
 
-    ![alt text](image.png)
+![alt text](images/image.png)
 
 
 
@@ -14,7 +14,7 @@
 
 - you go back to one commit and that commit reverse back to stagging area 
 
-    ![alt text](images/image-2.png)
+![alt text](images/image-2.png)
 
 
 
@@ -22,7 +22,7 @@
 
 - you go back to one commit & that commit changes reverse go back to untracked area 
 
-    ![alt text](images/image-1.png)
+![alt text](images/image-1.png)
 
 - re-commit, then use **git reset --hard** to go back one commit — what happens this time?
 
@@ -103,4 +103,4 @@ short-lived feature branches
 
 # Git Commands Reference Update
 
--   [Git_cheatsheet](https://github.com/Sandippatil6696/90DaysOfDevOps/blob/b6cdaae2efa7641154040c6f37730046b46e0d50/2026/day-22/git-commands.md)
+- [Git_cheatsheet](https://github.com/Sandippatil6696/90DaysOfDevOps/blob/b6cdaae2efa7641154040c6f37730046b46e0d50/2026/day-22/git-commands.md)
