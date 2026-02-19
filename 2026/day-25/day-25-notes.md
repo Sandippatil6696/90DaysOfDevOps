@@ -6,7 +6,7 @@
 
 - Make 3 commits
 
-![alt text1](/90DaysOfDevOps/2026/day-25/images/image.png)
+![alt text](/90DaysOfDevOps/2026/day-25/images/image.png)
 
 
 - Use **git reset --soft** to go back one commit — what happens to the changes?
@@ -104,4 +104,4 @@ short-lived feature branches
 
 # Git Commands Reference Update
 
-[Git_cheatsheet](https://github.com/Sandippatil6696/90DaysOfDevOps/blob/b6cdaae2efa7641154040c6f37730046b46e0d50/2026/day-22/git-commands.md)
+![Git_cheatsheet](https://github.com/Sandippatil6696/90DaysOfDevOps/blob/b6cdaae2efa7641154040c6f37730046b46e0d50/2026/day-22/git-commands.md)
