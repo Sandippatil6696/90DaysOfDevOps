@@ -6,7 +6,7 @@
 
 - Make 3 commits
 
-![alt text](/90DaysOfDevOps/2026/day-25/images/image.png)
+![alt text1](/90DaysOfDevOps/2026/day-25/images/image.png)
 
 
 - Use **git reset --soft** to go back one commit — what happens to the changes?
