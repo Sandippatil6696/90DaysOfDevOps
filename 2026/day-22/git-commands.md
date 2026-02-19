@@ -72,6 +72,20 @@
 
 `git restore <file>`
 
+- To remove from commit 
+
+`git revert <commitid>`
+
+- To remove commit history & changes also
+
+    - `--soft : removes commit id & points to current position`
+    - `--mixed : remove commit id & keeps changes locally`
+    - `--hard : remove commit id & also remove chages`
+
+`git reset --soft <commitid>`
+`git reset --mixed <commitid>`
+`git reset --hard <commitid>`
+
 ---
 
 # Branch
@@ -122,6 +136,10 @@
 
 `git stash`
 
+- To list all stash
+
+`git stash list`
+
 - To hide untracked files 
 
 `git stash -u`
@@ -130,8 +148,17 @@
 
 `git stash pop`
 
+- Cherry picking - to pick only specific commit 
 
----
+`git cherry-pick e2eef94`
+
+- Squash merge - to maintain no of commit history of dev branch into a single commit  
+
+`git switch main`
+
+`git merge dev --squash`
+
+--- 
 
 # Remote Repo 
 
