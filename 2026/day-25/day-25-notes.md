@@ -8,8 +8,6 @@
 
 ![alt text](images/image.png)
 
-
-
 - Use **git reset --soft** to go back one commit — what happens to the changes?
 
 - you go back to one commit and that commit reverse back to stagging area 
