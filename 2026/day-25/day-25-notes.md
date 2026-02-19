@@ -104,4 +104,4 @@ short-lived feature branches
 
 # Git Commands Reference Update
 
-  - ![Git_cheatsheet](https://github.com/Sandippatil6696/90DaysOfDevOps/blob/b6cdaae2efa7641154040c6f37730046b46e0d50/2026/day-22/git-commands.md)
+  - [Git_cheatsheet](https://github.com/Sandippatil6696/90DaysOfDevOps/blob/b6cdaae2efa7641154040c6f37730046b46e0d50/2026/day-22/git-commands.md)
