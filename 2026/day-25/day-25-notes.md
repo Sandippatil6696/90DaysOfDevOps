@@ -8,6 +8,7 @@
 
 ![alt text](images/image.png)
 
+
 - Use **git reset --soft** to go back one commit — what happens to the changes?
 
 - you go back to one commit and that commit reverse back to stagging area 
@@ -21,11 +22,13 @@
 
 ![alt text](images/image-1.png)
 
+
 - re-commit, then use **git reset --hard** to go back one commit — what happens this time?
 
 - you go back to one commit & it removes changes also 
 
 ![alt text](images/image-3.png)
+
 
 # Git Revert
 
@@ -34,6 +37,7 @@
 - but still y commit revert history in log
 
 ![alt text](images/image-4.png)
+
 
 
 - **How is git revert different from git reset?**
