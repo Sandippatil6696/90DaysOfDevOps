@@ -12,21 +12,20 @@
 
 - you go back to one commit and that commit reverse back to stagging area 
 
-![alt text](images/image-2.png)
-
+![alt text](image-2.png)
 
 
 - Re-commit, then use **git reset --mixed** to go back one commit — what happens now?
 
 - you go back to one commit & that commit changes reverse go back to untracked area 
 
-![alt text](images/image-1.png)
+![alt text](image-1.png)
 
 - re-commit, then use **git reset --hard** to go back one commit — what happens this time?
 
 - you go back to one commit & it removes changes also 
 
-![alt text](images/image-3.png)
+![alt text](image-3.png)
 
 # Git Revert
 
@@ -34,7 +33,7 @@
 - Revert commit Y 
 - but still y commit revert history in log
 
-![alt text](images/image-4.png)
+![alt text](image-4.png)
 
 
 - **How is git revert different from git reset?**
