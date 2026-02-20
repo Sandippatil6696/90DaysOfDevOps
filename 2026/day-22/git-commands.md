@@ -243,7 +243,41 @@
 `git clone <repo url>`
 
 
-# 
+# Github cli
+
+- *To install on linux*
+
+`sudo apt update && sudo apt install gh -y `
+
+- *To check version*
+
+`gh --version`
+
+- *To authenticate github*
+
+`gh auth login`
+
+- *To check auth status*
+
+`gh auth status`
+
+- *To create repo on gihub from local with public repo & add readme to it*
+
+`gh repo create java-project --public --add-readme`
+
+- *To clone repo using gihubcli*
+
+`gh repo clone Sandippatil6696/java-project`
+
+- *To open a repo from local directly from terminal*
+
+`gh repo view Sandippatil6696/java-project --web`
+
+- *To delete github repo from local*
+
+`gh repo delete Sandippatil6696/java-project`
+
+
 
 
 
