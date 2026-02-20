@@ -134,3 +134,48 @@
     - git diff
     - gh pr diff 3
     - gh pr review 3 --approve --body "request approve for changes"
+
+**GitHub Actions & Workflows**
+
+- *List the workflow runs on any public repo that uses GitHub Actions*
+
+    `gh run list -R owner/repo`
+
+    ![alt text](image-20.png)
+
+- *View the status of a specific workflow run*
+
+    `gh run view RUN_ID -R owner/repo`
+
+    ![alt text](image-21.png)
+
+- *How could gh run and gh workflow be useful in a CI/CD pipeline?*
+
+    - *gh run : to monitor pipeli e status*
+    - *gh workflow : to trigger delyoment manually*
+
+**Useful gh Tricks**
+
+- *gh api — make raw GitHub API calls from the terminal*
+
+    `gh api <url>`
+
+    ![alt text](image-22.png)
+
+- *gh gist — is a small Git repository Used for code snippets*
+
+    `gh gist create hellow.txt`
+
+- *gh release - is used to create, manage releases for a repository directly from the terminal*
+
+    `gh release create v1.1.0`
+
+- *gh alias - to create an alis fro command you frequently used*
+
+    `gh alias set runs 'run list --limit 2'`
+
+    `gh runs`
+
+- *gh search repos - to search GitHub repos from the terminal*
+
+    `gh search repos <reponame>`
