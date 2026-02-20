@@ -129,9 +129,8 @@
     - gh pr list
     - gh pr view 3
     - gh pr checks 3
-    - gh pr checkout 5
+    - gh pr checkout 
     - git log
     - git diff
-    - gh pr diff 5
+    - gh pr diff 3
     - gh pr review 3 --approve --body "request approve for changes"
-    
