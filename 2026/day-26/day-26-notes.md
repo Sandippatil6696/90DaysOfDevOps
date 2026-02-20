@@ -12,9 +12,13 @@
 
     ![alt text](image.png)
 
-    -  to authnticate 
+    -  To Authenticate Sandippatil6696 `gh auth login`
 
-    
+    - To check auth status `gh auth status`
+
+    ![alt text](image-1.png)
+
+    ![alt text](image-2.png)
 
 
 
