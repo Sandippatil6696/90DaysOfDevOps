@@ -29,7 +29,7 @@
 
     - no beacause i have not pinned any repo to show my work 
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 # Task 2: Create Your Profile README
 
@@ -37,7 +37,7 @@
 
 - *Add a README.md — this will appear on your profile page*
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 - *Include the following in your profile README:*
 
@@ -59,7 +59,7 @@
 
 - Click Save
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 
 # Clean Up
@@ -69,16 +69,16 @@
 
 -  i have rename this repo 
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 # Task 6: Before & After
 
 -**Before**
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 -**After**
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 
