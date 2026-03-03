@@ -14,7 +14,7 @@
 
     ![alt text](images/image.png)
 
-3. ompare ubuntu vs alpine — why is one much smaller?
+3. Compare ubuntu vs alpine — why is one much smaller?
 
     - alpine image is much smaller than ubuntu
 
