@@ -73,7 +73,7 @@
 
     - `docker start <containerid>`
 
-    - its shows conatiner is running 
+    - its shows container is running 
 
     ![alt text](images/image-3.png)
 
