@@ -199,6 +199,6 @@
 
      `apt update && apt install iputils-ping -y`
 
-    - yes app conatiner reach mysql DB by container name
+    - yes app container reach mysql DB by container name
     
     ![alt text](images/image-19.png)
