@@ -38,7 +38,7 @@
 
 4. Run a new one — is your data still there?
 
-    - my data ws gone 
+    - my data was gone 
 
     ![alt text](images/image-2.png)
 
