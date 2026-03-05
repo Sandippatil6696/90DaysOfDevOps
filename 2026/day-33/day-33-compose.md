@@ -13,6 +13,8 @@
 
 2. Write a docker-compose.yml that runs a single Nginx container with port mapping
 
+    `docker-compose.yml`
+
 3. Start it with docker compose up
 
     `docker compose up`
@@ -30,6 +32,9 @@
 
 - A WordPress container
 - A MySQL container
+
+    `docker-compose.two.yml`
+
  They should:
 
 - Be on the same network (Compose does this automatically)
@@ -105,6 +110,9 @@
 *Task 5: Environment Variables*
 
 - Add environment variables directly in your docker-compose.yml
+
+    `.env`
+    `docker-compose.two.env.yml`
 
     MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     MYSQL_DATABASE: ${MYSQL_DATABASE}
