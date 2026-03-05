@@ -1,0 +1,71 @@
+services:
+
+  db:
+    image: mysql:latest
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mysql_db
+      MYSQL_USER: sandip
+      MYSQL_PASSWORD: sandip
+    ports:
+      - "3308:3306"
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 60s
+      timeout: 20s
+      retries: 3
+      start_period: 10s
+    volumes:
+      - flask_app_data:/var/lib/mysql
+    networks:
+      - flask_app_network
+    labels:
+      - "project=flask-app"
+      - "service=db"
+      - "maintainer=sandip"
+
+
+  redis:
+    image: redis:latest
+    container_name: redis_container
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - flask_app_network
+    labels:
+      - "project=flask-app"
+      - "service=cache"
+      - "maintainer=sandip"
+
+
+  flask_app:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - flask_app_network
+    labels:
+      - "project=flask-app"
+      - "service=web"
+      - "maintainer=sandip"
+
+
+volumes:
+  flask_app_data:
+
+
+networks:
+  flask_app_network:
+    driver: bridge
