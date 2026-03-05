@@ -1,0 +1,9 @@
+services:
+  ngidonx:
+    image: nginx
+    container_name: nginx_container
+    ports:
+      - "80:80"
+   
+
+
