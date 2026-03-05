@@ -64,7 +64,7 @@
 
 1. Start services in detached mode
 
-    `docker compose -f docker-compose.two up -d `
+    `docker compose -f docker-compose.two.yml up -d `
 
     ![alt text](images/image-4.png)
 
