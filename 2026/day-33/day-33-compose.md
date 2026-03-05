@@ -89,10 +89,11 @@
 
 5. Stop services without removing
 
-    `docker compose -f docker-compose.two.yml stop <service name>`
-    `docker compose -f docker-compose.two.yml start <service name>`
+    - `docker compose -f docker-compose.two.yml stop <service name>`
 
     ![alt text](images/image-9.png)
+
+    - `docker compose -f docker-compose.two.yml start <service name>`
 
     ![alt text](images/image-10.png)
 
@@ -111,8 +112,8 @@
 
 - Add environment variables directly in your docker-compose.yml
 
-    `.env`
-    `docker-compose.two.env.yml`
+    - `.env`
+    - `docker-compose.two.env.yml`
 
     MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -127,19 +128,19 @@
 
 - Create a .env file and reference variables from it in your compose file
 
-    MYSQL_ROOT_PASSWORD: root
-    MYSQL_DATABASE: mysql_db
-    MYSQL_USER: sandip
-    MYSQL_PASSWORD: sandip
+    - MYSQL_ROOT_PASSWORD: root
+    - MYSQL_DATABASE: mysql_db
+    - MYSQL_USER: sandip
+    - MYSQL_PASSWORD: sandip
 
 
-    WORDPRESS_DB_HOST: mysql_container:3306
-    WORDPRESS_DB_USER: sandip
-    WORDPRESS_DB_PASSWORD: sandip
-    WORDPRESS_DB_NAME: mysql_db
+    - WORDPRESS_DB_HOST: mysql_container:3306
+    - WORDPRESS_DB_USER: sandip
+    - WORDPRESS_DB_PASSWORD: sandip
+    - WORDPRESS_DB_NAME: mysql_db
 
 - *Verify the variables are being picked up*
 
-    `docker compose -f docker-compose.two.env.yml config`
+    - `docker compose -f docker-compose.two.env.yml config`
 
     ![alt text](images/image-11.png)
