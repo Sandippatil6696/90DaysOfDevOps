@@ -1,0 +1,19 @@
+FROM eclipse-temurin:17-jdk
+
+WORKDIR /app
+
+# Copy application files
+COPY Hellow.java .
+
+# Create non-root user and group & set ownership
+RUN groupadd  javaappgrp && \
+    useradd  -g javaappgrp javaappuser && \
+    chown -R javaappuser:javaappgrp /app
+
+# Compile Java program
+RUN javac Hellow.java
+
+# Switch to non-root user
+USER javaappuser
+
+CMD ["java", "Hellow"]

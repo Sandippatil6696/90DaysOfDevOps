@@ -1,0 +1,14 @@
+com\ecommerce\ewebsite\dto\ProductDTO.class
+com\ecommerce\ewebsite\model\Category.class
+com\ecommerce\ewebsite\repository\ProductRepository.class
+com\ecommerce\ewebsite\config\SecurityConfig.class
+com\ecommerce\ewebsite\service\ProductService.class
+com\ecommerce\ewebsite\model\Role.class
+com\ecommerce\ewebsite\model\User.class
+com\ecommerce\ewebsite\repository\CategoryRepository.class
+com\ecommerce\ewebsite\service\CategoryService.class
+com\ecommerce\ewebsite\model\Product.class
+com\ecommerce\ewebsite\controller\HomeController.class
+com\ecommerce\ewebsite\controller\AdminController.class
+com\ecommerce\ewebsite\model\CustomUserDetail.class
+com\ecommerce\ewebsite\EwebsiteApplication.class

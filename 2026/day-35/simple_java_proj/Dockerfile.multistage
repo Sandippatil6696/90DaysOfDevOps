@@ -1,0 +1,18 @@
+#STAGE 1 - Build stage
+FROM eclipse-temurin:17-jdk AS builder
+
+WORKDIR /app
+
+COPY . .
+
+RUN javac Hellow.java
+
+#STAGE 2 - Runtime stage
+
+FROM eclipse-temurin:17-jre-alpine AS runtime
+
+WORKDIR /app
+
+COPY --from=builder /app/Hellow.class .
+
+CMD ["java", "Hellow"]

@@ -1,0 +1,19 @@
+# stage 1 - build stage
+FROM eclipse-temurin:17-jdk AS builder
+
+WORKDIR /app
+
+COPY . .
+
+RUN javac Hellow.java
+
+# stage 2 - runtime stage
+
+FROM gcr.io/distroless/java17-debian12 AS runtime
+
+WORKDIR /app
+
+COPY --from=builder /app/Hellow.class .
+
+CMD ["Hellow"]  
+
