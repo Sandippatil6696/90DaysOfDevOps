@@ -16,12 +16,14 @@
 
     - its size is 421 MB, is too large for a simple line code
 
+    - Dockerfile  `Dockerfile`
+
 
 *Task 2: Multi-Stage Builds*
 
 1. Rewrite the Dockerfile using multi-stage build:
-   Stage 1: Build the app (install dependencies, compile)
-   Stage 2: Copy only the built artifact into a minimal base image (alpine, distroless, or scratch)
+   - Stage 1: Build the app (install dependencies, compile)
+   - Stage 2: Copy only the built artifact into a minimal base image (alpine, distroless, or scratch)
 
    ![alt text](images/image-2.png)
 
@@ -29,7 +31,7 @@
 
     - `docker build -f Dockerfile.multistage -t simple_java_mul_proj .`
 
-    - Dockerfile  `Dockerfile`
+    - Dockerfile  `Dockerfile.multistage`
 
 
 3. Compare the two sizes
@@ -66,27 +68,29 @@
 
 2. Log in from your terminal
 
-     `docker login`
+    - `docker login`
 
 3. Tag your image properly: yourusername/image-name:tag
 
-    `docker tag local-image yourusername/yourrepo:tag`
+    - `docker tag local-image yourusername/yourrepo:tag`
 
-    `docker tag simple_java_mul_proj sandippatil6696/simple-java-multistage-image:v1`
+    - `docker tag simple_java_mul_proj sandippatil6696/simple-java-multistage-image:v1`
 
 4. Push it to Docker Hub
 
-    `docker push sandippatil6696/simple-java-multistage-image:v1`
+    - `docker push sandippatil6696/simple-java-multistage-image:v1`
 
     ![alt text](images/image-5.png)
 
 5. Pull it on a different machine (or after removing locally) to verify
 
-    `docker pull sandippatil6696/simple-java-multistage-image:v1`
+    - `docker pull sandippatil6696/simple-java-multistage-image:v1`
 
 
 *Task 4: Docker Hub Repository*
 1. Go to Docker Hub and check your pushed image
+
+    ![alt text](images/image15.png)
 
 2. Add a description to the repository
 
