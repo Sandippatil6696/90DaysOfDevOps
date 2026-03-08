@@ -1,0 +1,24 @@
+server:
+  name: aws_ec2_instance
+  ip: 10.1.9.70
+  port: 8080
+
+database:
+  name: mysql_db
+  host: localhost
+  credentials:
+    username: root
+    password: root
+
+startup_script_block: |
+  #!/bin/bash
+  echo "hellow , welcoem to devops"
+  echo "${USER}"
+
+start_up_script_folded: >
+  #!/bin/bash
+  echo "hellow , welcoem to devops"
+  echo "${USER}"
+
+
+  
