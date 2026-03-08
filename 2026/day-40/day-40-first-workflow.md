@@ -71,5 +71,4 @@ Verify: Is it green? Click into the job and read every step.
     - Write in your notes: What does a failed pipeline look like? How do you read the error?
 
 
-
-    ![alt text](images/image-5.png)
+    ![alt text](images/image14.png)
