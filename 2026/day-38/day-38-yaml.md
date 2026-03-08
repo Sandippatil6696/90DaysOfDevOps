@@ -43,7 +43,7 @@
 
     - Verify: Try adding a tab instead of spaces — what happens when you validate it?
 
-    - When you add a tab instead of spaces in YAML, it will cause a syntax error during validation. YAML requires consistent indentation using spaces.
+        - When you add a tab instead of spaces in YAML, it will cause a syntax error during validation. YAML requires consistent indentation using spaces.
 
 
 *Task 4: Multi-line Strings*
