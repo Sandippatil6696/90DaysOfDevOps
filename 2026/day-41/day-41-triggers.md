@@ -82,9 +82,9 @@
 
     - ![alt text](images/image.png)   
 
-    - ![alt text](images/image-1.png) 
+    - ![alt text](images/image-11.png) 
 
-    - ![alt text](images/image-2.png)
+    - ![alt text](images/image-12.png)
 
 
     - There is 6 total jobs run now because we have 3 python versions and 2 operating systems so 3*2 = 6
@@ -93,9 +93,9 @@
 
 1. In your matrix, exclude one specific combination (e.g., Python 3.12 on Windows)
 
-    - ![alt text](images/image-3.png)
+    - ![alt text](images/image-13.png)
 
-    - ![alt text](images/image-4.png)
+    - ![alt text](images/image-14.png)
 
 
 2. Set fail-fast: false — trigger a failure in one job and observe what happens to the rest
