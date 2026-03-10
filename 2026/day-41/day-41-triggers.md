@@ -80,7 +80,7 @@
 
 5. Then extend the matrix to also include 2 operating systems — how many total jobs run now?
 
-    - ![alt text](images/image.png)   
+    - ![alt text](images/image10.png)   
 
     - ![alt text](images/image-11.png) 
 
