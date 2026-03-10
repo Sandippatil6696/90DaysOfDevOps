@@ -67,7 +67,7 @@
 
 1. Create .github/workflows/matrix.yml that:
 
-    ![alt text](images/image-8.png)
+    - ![alt text](images/image-8.png)
 
 2. Uses a matrix strategy to run the same job across:
 3. Python versions: 3.10, 3.11, 3.12
@@ -75,7 +75,7 @@
     
     Watch all 3 run in parallel
 
-   ![alt text](images/image-9.png)
+   - ![alt text](images/image-9.png)
 
 
 5. Then extend the matrix to also include 2 operating systems — how many total jobs run now?
