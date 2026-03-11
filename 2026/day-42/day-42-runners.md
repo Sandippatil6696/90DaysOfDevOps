@@ -86,7 +86,7 @@
 
     - if i have multiple self hosted runner then labels is used to easily understand on which runners your job will run .
 
-**6.GitHub-Hosted vs Self-Hosted**
+**6. GitHub-Hosted vs Self-Hosted**
 
 
 | Feature | GitHub-Hosted | Self-Hosted |
