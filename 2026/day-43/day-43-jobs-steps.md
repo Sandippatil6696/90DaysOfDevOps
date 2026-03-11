@@ -80,9 +80,9 @@ In a workflow, add:
 
 Create .github/workflows/smart-pipeline.yml that:
 
-Triggers on push to any branch
-Has a lint job and a test job running in parallel
-Has a summary job that runs after both, prints whether it's a main branch push or a feature branch push, and prints the commit message
+- Triggers on push to any branch
+- Has a lint job and a test job running in parallel
+- Has a summary job that runs after both, prints whether it's a main branch push or a feature branch push, and prints the commit message
 
 ![alt text](images/image-12.png)
 
