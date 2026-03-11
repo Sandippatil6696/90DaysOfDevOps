@@ -27,7 +27,8 @@
     - Node version
     - Git version
 2. Look up the GitHub docs for the full list of pre-installed software on ubuntu-latest
-   Write in your notes: Why does it matter that runners come with tools pre-installed?
+
+   *Write in your notes: Why does it matter that runners come with tools pre-installed?*
 
     - It saves time and effort in setting up the environment for your workflows. You can immediately use popular tools and languages without having to install them yourself, which speeds up development and testing processes.
 
@@ -37,7 +38,7 @@
 
 *Task 3: Set Up a Self-Hosted Runner*
 
-Go to your GitHub repo → Settings → Actions → Runners → New self-hosted runner
+ - Go to your GitHub repo → Settings → Actions → Runners → New self-hosted runner
 
 1. Choose Linux as the OS
 2. Follow the instructions to download and configure the runner on:
@@ -54,9 +55,9 @@ Go to your GitHub repo → Settings → Actions → Runners → New self-hosted 
 
 2. Set runs-on: self-hosted
 3. Add steps that:
-        - Print the hostname of the machine (it should be YOUR machine/VM)
-        - Print the working directory
-        - Create a file and verify it exists on your machine after the run
+    - Print the hostname of the machine (it should be YOUR machine/VM)
+    - Print the working directory
+    - Create a file and verify it exists on your machine after the run
 4. Trigger it and watch it run on your own hardware
 
     Verify: Check your machine — is the file there?
@@ -84,8 +85,6 @@ Go to your GitHub repo → Settings → Actions → Runners → New self-hosted 
 
 *6.GitHub-Hosted vs Self-Hosted*
 
-
-## GitHub-Hosted vs Self-Hosted Runners
 
 | Feature | GitHub-Hosted | Self-Hosted |
 |---|---|---|
