@@ -12,6 +12,8 @@
 
 - Verify: Check the workflow graph in the Actions tab — does it show the dependency chain?
 
+![alt text](images/image-11.png)
+
 ![alt text](images/image.png)
 
 **Task 2: Environment Variables**
@@ -47,6 +49,7 @@
 
 ![alt text](images/image-3.png)
 
+
 **Task 4: Conditionals**
 
 In a workflow, add:
@@ -80,6 +83,8 @@ Create .github/workflows/smart-pipeline.yml that:
 Triggers on push to any branch
 Has a lint job and a test job running in parallel
 Has a summary job that runs after both, prints whether it's a main branch push or a feature branch push, and prints the commit message
+
+![alt text](images/image-12.png)
 
 ![alt text](images/image-8.png)
 
