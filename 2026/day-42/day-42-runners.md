@@ -15,9 +15,10 @@
 
     - A GitHub-hosted runner is a virtual machine provided and managed by GitHub that runs your workflow jobs. You don't have to worry about maintenance, updates, or security patches as GitHub takes care of all that for you.
 
-    - ![alt text](image-1.png)
+    ![alt text](image-1.png)
 
-    - ![alt text](image.png)
+
+    ![alt text](image.png)
 
 *Task 2: Explore What's Pre-installed*
 
@@ -32,9 +33,9 @@
 
     - It saves time and effort in setting up the environment for your workflows. You can immediately use popular tools and languages without having to install them yourself, which speeds up development and testing processes.
 
-    - ![alt text](image-3.png)
+     ![alt text](image-3.png)
 
-    - ![alt text](image-2.png)
+     ![alt text](image-2.png)
 
 *Task 3: Set Up a Self-Hosted Runner*
 
@@ -47,7 +48,7 @@
     - Start the runner — verify it shows as Idle in GitHub
 4. Verify: Your runner appears in the Runners list with a green dot.
 
-    - ![alt text](image-5.png)
+    ![alt text](image-5.png)
 
 *Task 4: Use Your Self-Hosted Runner*
 
@@ -62,21 +63,23 @@
 
     Verify: Check your machine — is the file there?
 
-    - ![alt text](image-8.png)
+    ![alt text](image-8.png)
 
-    - ![alt text](image-6.png)
+    ![alt text](image-6.png)
 
-    - ![alt text](image-7.png)
+    ![alt text](image-7.png)
 
 *5. Task 5: Labels*
 
 1. Add a label to your self-hosted runner (e.g., my-linux-runner)
 2. Update your workflow to use runs-on: [self-hosted, my-linux-runner]
 3. Trigger it — does it still pick up the job?
-    
-    - ![alt text](image-10.png)
 
-    - ![alt text](image-9.png)
+    ![alt text](image-11.png)
+    
+    ![alt text](image-10.png)
+
+    ![alt text](image-9.png)
 
     
     Write in your notes: Why are labels useful when you have multiple self-hosted runners?
