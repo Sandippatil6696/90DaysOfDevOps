@@ -1,6 +1,6 @@
 # Day 42 – Runners: GitHub-Hosted & Self-Hosted
 
-*Task 1: GitHub-Hosted Runners*
+**Task 1: GitHub-Hosted Runners**
 
 1. Create a workflow with 3 jobs, each on a different OS:
     - ubuntu-latest
@@ -15,12 +15,12 @@
 
     - A GitHub-hosted runner is a virtual machine provided and managed by GitHub that runs your workflow jobs. You don't have to worry about maintenance, updates, or security patches as GitHub takes care of all that for you.
 
-    ![alt text](image-1.png)
+    ![alt text](images/image-1.png)
 
 
-    ![alt text](image.png)
+    ![alt text](images/image.png)
 
-*Task 2: Explore What's Pre-installed*
+**Task 2: Explore What's Pre-installed**
 
 1. On the ubuntu-latest runner, run a step that prints:
     - Docker version
@@ -33,11 +33,11 @@
 
     - It saves time and effort in setting up the environment for your workflows. You can immediately use popular tools and languages without having to install them yourself, which speeds up development and testing processes.
 
-     ![alt text](image-3.png)
+     ![alt text](images/image-3.png)
 
-     ![alt text](image-2.png)
+     ![alt text](images/image-2.png)
 
-*Task 3: Set Up a Self-Hosted Runner*
+**Task 3: Set Up a Self-Hosted Runner**
 
  - Go to your GitHub repo → Settings → Actions → Runners → New self-hosted runner
 
@@ -48,9 +48,9 @@
     - Start the runner — verify it shows as Idle in GitHub
 4. Verify: Your runner appears in the Runners list with a green dot.
 
-    ![alt text](image-5.png)
+    ![alt text](images/image-5.png)
 
-*Task 4: Use Your Self-Hosted Runner*
+**Task 4: Use Your Self-Hosted Runner**
 
 1. Create .github/workflows/self-hosted.yml
 
@@ -63,30 +63,30 @@
 
     Verify: Check your machine — is the file there?
 
-    ![alt text](image-8.png)
+    ![alt text](images/image-8.png)
 
-    ![alt text](image-6.png)
+    ![alt text](images/image-6.png)
 
-    ![alt text](image-7.png)
+    ![alt text](images/image-7.png)
 
-*5. Task 5: Labels*
+**5. Task 5: Labels**
 
 1. Add a label to your self-hosted runner (e.g., my-linux-runner)
 2. Update your workflow to use runs-on: [self-hosted, my-linux-runner]
 3. Trigger it — does it still pick up the job?
 
-    ![alt text](image-11.png)
+    ![alt text](images/image-11.png)
     
-    ![alt text](image-10.png)
+    ![alt text](images/image-10.png)
 
-    ![alt text](image-9.png)
+    ![alt text](images/image-9.png)
 
     
     Write in your notes: Why are labels useful when you have multiple self-hosted runners?
 
     - if i have multiple self hosted runner then labels is used to easily understand on which runners your job will run .
 
-*6.GitHub-Hosted vs Self-Hosted*
+**6.GitHub-Hosted vs Self-Hosted**
 
 
 | Feature | GitHub-Hosted | Self-Hosted |
