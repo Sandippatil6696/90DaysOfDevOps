@@ -99,7 +99,7 @@ Take any script from your earlier days (Python or Shell) and run it in CI:
 
   - the workflow stores files or directories or  dependencies so they can be reused in future runs.
 
-  - he cache is not stored on the runner machine permanently.
+  - cache is not stored on the runner machine permanently.
 
   - It is stored in GitHub’s cloud storage associated with the repository managed by **GitHub.
 
