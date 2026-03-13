@@ -50,9 +50,9 @@ Add a condition so the push step only runs on the main branch — not on feature
 
 Test it: push to a feature branch and verify the image is built but NOT pushed.
 
-- on:
--   push:
--     branches: [ main ]
+ `on:`
+    `push:`
+       `branches: [ main ]`
 
 **Task 5: Add a Status Badge**
 
@@ -72,7 +72,7 @@ Test it: push to a feature branch and verify the image is built but NOT pushed.
 
 2. Run it
 
-![alt text]images/(image-6.png)
+![alt text](images/image-6.png)
 
 ![alt text](images/image-7.png)
 
@@ -86,20 +86,20 @@ Test it: push to a feature branch and verify the image is built but NOT pushed.
 - Write in your notes: What is the full journey from git push to a running container?
 
 - git push
--    ↓
+     ↓
 - GitHub Trigger
--     ↓
+     ↓
 - Checkout Code
--     ↓
+     ↓
 - Install requirements
--     ↓
+     ↓
 - Docker Build & push to dockerhub
--     ↓
+     ↓
 - pull images & Deploy on Server
--     ↓
+     ↓
 - Container Running
--     ↓
+     ↓
 - Users Access App
 
 
-![alt text](images/image-10.png)
+![alt text](images/image13.png)
