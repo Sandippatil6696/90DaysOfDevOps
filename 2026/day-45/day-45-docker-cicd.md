@@ -56,6 +56,7 @@ Test it: push to a feature branch and verify the image is built but NOT pushed.
 
 2. Add it to your README.md
 
-- [![docker build and push](https://github.com/Sandippatil6696/github-actions-cicd-demo/actions/workflows/docker-push-build.yml/badge.svg)](https://github.com/Sandippatil6696/github-actions-cicd-demo/actions/workflows/docker-push-build.yml)
-
 3. Push — the badge should show green
+
+
+- [![docker build and push](https://github.com/Sandippatil6696/github-actions-cicd-demo/actions/workflows/docker-push-build.yml/badge.svg)](https://github.com/Sandippatil6696/github-actions-cicd-demo/actions/workflows/docker-push-build.yml)
