@@ -4,15 +4,19 @@
 
 1. Use the app you Dockerized on Day 36 (or any simple Dockerfile)
 
+- uses python flask app 
+
+![alt text](images/image12.png)
+
 2. Add the Dockerfile to your github-actions-practice repo (or create a minimal one)
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 3. Make sure DOCKER_USERNAME and DOCKER_TOKEN secrets are set from Day 44
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 **Task 2: Build the Docker Image in CI**
 
@@ -22,11 +26,11 @@
 2. Checks out the code
 3. Builds the Docker image and tags it
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 - Verify: Check the build step logs — does the image build successfully?
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 **Task 3: Push to Docker Hub**
 
@@ -38,7 +42,7 @@ Add steps to:
 
 - Verify: Go to Docker Hub — is your image there with both tags?
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 **Task 4: Only Push on Main**
 
@@ -60,3 +64,42 @@ Test it: push to a feature branch and verify the image is built but NOT pushed.
 
 
 - [![docker build and push](https://github.com/Sandippatil6696/github-actions-cicd-demo/actions/workflows/docker-push-build.yml/badge.svg)](https://github.com/Sandippatil6696/github-actions-cicd-demo/actions/workflows/docker-push-build.yml)
+
+
+**Task 6: Pull and Run It**
+
+1. On your local machine (or a cloud server), pull the image you just pushed
+
+2. Run it
+
+![alt text]images/(image-6.png)
+
+![alt text](images/image-7.png)
+
+![alt text](images/image-8.png)
+
+3. Confirm it works
+
+![alt text](images/image-9.png)
+
+
+- Write in your notes: What is the full journey from git push to a running container?
+
+- git push
+-    ↓
+- GitHub Trigger
+-     ↓
+- Checkout Code
+-     ↓
+- Install requirements
+-     ↓
+- Docker Build & push to dockerhub
+-     ↓
+- pull images & Deploy on Server
+-     ↓
+- Container Running
+-     ↓
+- Users Access App
+
+
+![alt text](images/image-10.png)
