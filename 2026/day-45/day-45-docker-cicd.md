@@ -74,7 +74,7 @@ Test it: push to a feature branch and verify the image is built but NOT pushed.
 
 ![alt text](images/image-6.png)
 
-![alt text](images/image-7.png)
+![alt text](images/image-15.png)
 
 ![alt text](images/image-8.png)
 
