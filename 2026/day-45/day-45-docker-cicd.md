@@ -46,9 +46,9 @@ Add a condition so the push step only runs on the main branch — not on feature
 
 Test it: push to a feature branch and verify the image is built but NOT pushed.
 
-- `on:`
-    `push:`
-      `branches: [ main ]`
+- on:
+-   push:
+-     branches: [ main ]
 
 **Task 5: Add a Status Badge**
 
