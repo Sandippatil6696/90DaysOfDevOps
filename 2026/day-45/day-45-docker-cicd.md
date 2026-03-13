@@ -85,49 +85,35 @@ Test it: push to a feature branch and verify the image is built but NOT pushed.
 
 - Write in your notes: What is the full journey from git push to a running container?
 
-- git push  
+git push  
 <br>
-
 ↓  
 <br>
-
-- GitHub Trigger  
+GitHub Trigger  
 <br>
-
 ↓  
 <br>
-
-- Checkout Code  
+Checkout Code  
 <br>
-
 ↓  
 <br>
-
-- Install requirements  
+Install requirements  
 <br>
-
 ↓  
 <br>
-
-- Docker Build & push to dockerhub  
+Docker Build & push to dockerhub  
 <br>
-
 ↓  
 <br>
-
-- pull images & Deploy on Server  
+pull images & Deploy on Server  
 <br>
-
 ↓  
 <br>
-
-- Container Running  
+Container Running  
 <br>
-
 ↓  
 <br>
-
-- Users Access App
+Users Access App
 
 
 ![alt text](images/image13.png)
