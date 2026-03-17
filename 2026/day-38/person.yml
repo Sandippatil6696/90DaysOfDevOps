@@ -2,3 +2,10 @@ name: sandip
 role: devops engineer
 experience_years: 5
 learning: true
+tools:
+  - docker
+  - kubernetes
+  - terraform
+  - ansible
+  - github actions
+hobbies: ["playing cricket", "traveling"]
