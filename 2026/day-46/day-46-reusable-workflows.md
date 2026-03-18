@@ -1,7 +1,7 @@
 # Day 46 – Reusable Workflows & Composite Actions
 
 
-**Task 1: Understand workflow_call**
+# Task 1: Understand workflow_call
 
 1. What is a reusable workflow
 
@@ -38,11 +38,11 @@ Create `.github/workflows/reusable-build.yml`:
 
 - It will not run untill it will call from other workflow
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 
 
-**Task 3: Create a Caller Workflow**
+# Task 3: Create a Caller Workflow
 
 Create `.github/workflows/call-build.yml`:
 
@@ -64,35 +64,35 @@ Create `.github/workflows/call-build.yml`:
 
 - yes it will call a reusable-build workflow & printed input
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 # Task 4: Add Outputs to the Reusable Workflow
 Extend `reusable-build.yml`:
 
 1. Add an `outputs:` section that exposes a `build_version` value
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 2. Inside the job, generate a version string (e.g., `v1.0-<short-sha>`) and set it as output
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 3. In your caller workflow, add a second job that:
    - Depends on the build job (`needs:`)
    - Reads and prints the `build_version` output
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 
 **Verify:** Does the second job print the version from the reusable workflow?
 
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 
 # Task 6: Reusable Workflow vs Composite Action
