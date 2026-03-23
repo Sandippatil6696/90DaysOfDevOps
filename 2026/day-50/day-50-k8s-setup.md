@@ -31,16 +31,16 @@ From memory, draw or describe the Kubernetes architecture. Your diagram should i
 
 - What happens when you run `kubectl apply -f pod.yaml`? Trace the request through each component.
 
-    - When you run a cmd `kubectl apply -f pod.yaml` kubectl send a request to api server
-    - api server writes pod object into etcd 
-    - etcd stores the desired state of pod i.e pod must to be created 
-    - scheduler contineously listen to api server & sees a new pod & unassign pod
-    - schedular assign new pod to healthy node & again stored its desired state to etcd via api server 
-    - then kubelet detects a pod assign to its node & kubelet begins Pod creation.
-    - kubelet talks with container runtime like docker , containerd & create a container & started
-    - kubeproxy is used to talks with your container to external users 
-    - once container runs successfully , kubelet update pod status to api server to etcd 
-    - & when you run a cmd kubectl get pods it will show running . 
+  - When you run a cmd `kubectl apply -f pod.yaml` kubectl send a request to api server
+  - api server writes pod object into etcd 
+  - etcd stores the desired state of pod i.e pod must to be created 
+  - scheduler contineously listen to api server & sees a new pod & unassign pod
+  - schedular assign new pod to healthy node & again stored its desired state to etcd via api server 
+  - then kubelet detects a pod assign to its node & kubelet begins Pod creation.
+  - kubelet talks with container runtime like docker , containerd & create a container & started
+  - kubeproxy is used to talks with your container to external users 
+  - once container runs successfully , kubelet update pod status to api server to etcd 
+  - & when you run a cmd kubectl get pods it will show running . 
 
 
 - What happens if the API server goes down?
@@ -53,81 +53,85 @@ From memory, draw or describe the Kubernetes architecture. Your diagram should i
 
 ---
 
-### Task 3: Install kubectl
+# Task 3: Install kubectl
 `kubectl` is the CLI tool you will use to talk to your Kubernetes cluster.
 
 Install it:
 
 # Linux (amd64)
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-chmod +x kubectl
-sudo mv kubectl /usr/local/bin/
+- curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+- chmod +x kubectl
+- sudo mv kubectl /usr/local/bin/
 
-Verify:
+- Verify:
 
-kubectl version 
+`kubectl version `
 
 ![alt text](images/image.png)
 
-### Task 4: Set Up Your Local Cluster
-
-**Option A: kind (Kubernetes in Docker)**
+# Task 4: Set Up Your Local Cluster
 
 # Install kind
 
 # Linux
-curl -Lo ./kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64
-chmod +x ./kind
-sudo mv ./kind /usr/local/bin/kind
+- curl -Lo ./kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64
+- chmod +x ./kind
+- sudo mv ./kind /usr/local/bin/kind
 
 # Create a cluster
-kind create cluster --config kind-config.yml
+
+`kind create cluster --config kind-config.yml`
 
 ![alt text](images/image-2.png)
 
 
 # Verify
-kubectl cluster-info
-kubectl get nodes
+`kubectl cluster-info`
+`kubectl get nodes`
 
 ![alt text](images/image-1.png)
 
 
 
-### Task 5: Explore Your Cluster
+# Task 5: Explore Your Cluster
 Now that your cluster is running, explore it:
 
 
 # See cluster info
-kubectl cluster-info
+
+`kubectl cluster-info`
 
 ![alt text](images/image-3.png)
 
 # List all nodes
-kubectl get nodes
+
+`kubectl get nodes`
 
 ![alt text](images/image-4.png)
 
 # Get detailed info about your node
-kubectl describe node <node-name>
+
+`kubectl describe node <node-name>`
 
 ![alt text](images/image-5.png)
 
 # List all namespaces
-kubectl get namespaces
 
-kubectl get ns
+`kubectl get namespaces`
+
+`kubectl get ns`
 
 ![alt text](images/image-6.png)
 
 # See ALL pods running in the cluster (across all namespaces)
-kubectl get pods -A
+
+`kubectl get pods -A`
 
 ![alt text](images/image-7.png)
 
 # Look at the pods running in the `kube-system` namespace:
 
-kubectl get pods -n kube-system
+`kubectl get pods -n kube-system`
 
 ![alt text](images/image-8.png)
 
@@ -140,38 +144,44 @@ yes
 ---
 
 
-### Task 6: Practice Cluster Lifecycle
+# Task 6: Practice Cluster Lifecycle
 Build muscle memory with cluster operations:
 
 # Delete your cluster
-kind delete cluster --name devops-cluster
+
+`kind delete cluster --name devops-cluster`
 
 ![alt text](images/image-9.png)
 
 # Recreate it
-kind create cluster --config kind-config.yml
+
+`kind create cluster --config kind-config.yml`
 
 ![alt text](images/image-10.png)
 
 # Verify it is back
-kubectl get nodes
+
+`kubectl get nodes`
 
 ![alt text](images/image-11.png)
 
 Try these useful commands:
 
 # Check which cluster kubectl is connected to
-kubectl config current-context
+
+`kubectl config current-context`
 
 ![alt text](images/image-12.png)
 
 # List all available contexts (clusters)
-kubectl config get-contexts
+
+`kubectl config get-contexts`
 
 ![alt text](images/image-13.png)
 
 # See the full kubeconfig
-kubectl config view
+
+`kubectl config view`
 
 ![alt text](images/image-14.png)
 
