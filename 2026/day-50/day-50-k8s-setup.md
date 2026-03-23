@@ -1,7 +1,7 @@
 # Day 50 – Kubernetes Architecture and Cluster Setup
 
 
-### Task 1: Recall the Kubernetes Story
+**Task 1: Recall the Kubernetes Story**
 
 1. Why was Kubernetes created? What problem does it solve that Docker alone cannot?
 
@@ -15,7 +15,7 @@
 
     - a ship steering 
 
-### Task 2: Draw the Kubernetes Architecture
+**Task 2: Draw the Kubernetes Architecture**
 From memory, draw or describe the Kubernetes architecture. Your diagram should include:
 
 **Control Plane (Master Node):**
@@ -53,7 +53,7 @@ From memory, draw or describe the Kubernetes architecture. Your diagram should i
 
 ---
 
-# Task 3: Install kubectl
+**Task 3: Install kubectl**
 `kubectl` is the CLI tool you will use to talk to your Kubernetes cluster.
 
 Install it:
@@ -93,7 +93,7 @@ Install it:
 
 
 
-# Task 5: Explore Your Cluster
+**Task 5: Explore Your Cluster**
 Now that your cluster is running, explore it:
 
 
@@ -144,7 +144,7 @@ yes
 ---
 
 
-# Task 6: Practice Cluster Lifecycle
+**Task 6: Practice Cluster Lifecycle**
 Build muscle memory with cluster operations:
 
 # Delete your cluster
