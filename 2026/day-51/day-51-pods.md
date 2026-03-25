@@ -154,6 +154,7 @@ Now intentionally break your YAML (remove the `image` field or add an invalid fi
 
 ![alt text](images/image-17.png)
 
+---
 
 ## Task 5: Pod Labels and Filtering
 
