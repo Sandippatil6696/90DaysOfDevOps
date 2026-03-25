@@ -1,6 +1,6 @@
 # Day 51 – Kubernetes Manifests and Your First Pods
 
-**Task 1: Create Your First Pod (Nginx)**
+## Task 1: Create Your First Pod (Nginx)
 
 - Create a file called `nginx-pod.yaml`:
 
@@ -47,7 +47,9 @@ Wait until the STATUS shows `Running`. Then explore:
 
 ![alt text](images/image-5.png)
 
-**Task 2: Create a Custom Pod (BusyBox)**
+--- 
+
+## Task 2: Create a Custom Pod (BusyBox)
 
 - Write a new manifest busybox-pod.yaml from scratch (do not copy-paste the nginx one):
 
@@ -73,7 +75,9 @@ Notice the `command` field — BusyBox does not run a long-lived server like Ngi
 
 - yes 
 
-**Task 3: Imperative vs Declarative**
+---
+
+## Task 3: Imperative vs Declarative
 
 You have been using the declarative approach (writing YAML, then `kubectl apply`). Kubernetes also supports imperative commands:
 
@@ -123,8 +127,10 @@ This is a powerful trick — use it to quickly scaffold a manifest, then customi
  - restartPolicy: Always
  - status: {}
 
+---
 
-**Task 4: Validate Before Applying**
+## Task 4: Validate Before Applying
+
 Before applying a manifest, you can validate it:
 
 ```bash
@@ -149,7 +155,7 @@ Now intentionally break your YAML (remove the `image` field or add an invalid fi
 ![alt text](images/image-17.png)
 
 
-**Task 5: Pod Labels and Filtering**
+## Task 5: Pod Labels and Filtering
 
 Labels are how Kubernetes organizes and selects resources. You added labels in your manifests — now use them:
 
@@ -172,7 +178,7 @@ kubectl label pod nginx-pod environment=production
 ```
 ![alt text](images/image-20.png)
 
-- it does not overwrite if it has already label
+- it does not overwrite if it has already label of key i.e app & it add another label if key is different 
 
 ```bash
 # Verify
@@ -194,7 +200,7 @@ Write a manifest for a third pod with at least 3 labels (app, environment, team)
 
 ---
 
-**Task 6: Clean Up**
+## Task 6: Clean Up
 
 Delete all the pods you created:
 
