@@ -61,9 +61,10 @@
 
 # Branching Strategies
 
-- *GitFlow — develop, feature, release, hotfix branches*
+# *GitFlow — develop, feature, release, hotfix branches*
 
-main - (productio ready code)
+```bash
+main - (production ready code)
   ↑
 release/* (Pre-release)
   ↑
@@ -75,18 +76,22 @@ feature/*  (for adding New features)
 
 - used to fix production issue 
 
-- *user for large teams*
+- *use for large teams*
+```
 
-- *GitHub Flow simple, single main branch + feature branches*
+# *GitHub Flow simple, single main branch + feature branches*
 
+```bash
 main
   ↑ PR → merge → deploy
 feature-branch 
 
 - Used by those companies which have continuous deployment on GitHub
+```
 
-- *Trunk-Based Development — everyone commits to main, short-lived branches*
+# *Trunk-Based Development — everyone commits to main, short-lived branches*
 
+```bash
 main (trunk)
   ↑
 short-lived feature branches 
@@ -94,6 +99,8 @@ short-lived feature branches
 - short live branches frequently merge into main branch 
 
 - used for mostly Microservices , devops teams etc 
+```
+
 
 *Which strategy would you use for a startup shipping fast?*
 - Trunk-Based Development or github flow 

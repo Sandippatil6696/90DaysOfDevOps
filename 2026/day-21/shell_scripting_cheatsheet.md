@@ -116,11 +116,11 @@
 
     - `-s` : it returns true if file is not empty 
 
-    ![alt text](images/image-26.png)
+![alt text](images/image-26.png)
 
-    ![alt text](images/image-24.png)
+![alt text](images/image-24.png)
 
-    ![alt text](images/image-25.png)
+![alt text](images/image-25.png)
 
 - **if, elif, else syntax**
 
