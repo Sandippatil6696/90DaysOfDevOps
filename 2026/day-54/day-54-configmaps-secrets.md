@@ -5,11 +5,11 @@
 
 - `kubectl create configmap app-config --from-literal=APP_ENV=production --from-literal=APP_DEBUG=false --from-literal=APP_PORT=8080`
 
-![alt text](imges/image.png)
+![alt text](images/image.png)
 
 2. Inspect it with `kubectl describe configmap app-config` and `kubectl get configmap app-config -o yaml`
 
-![alt text](imges/image-1.png)
+![alt text](images/image-1.png)
 
 3. Notice the data is stored as plain text — no encoding, no encryption
 
@@ -26,22 +26,22 @@
 
 **Verify:** Does `kubectl get configmap nginx-config -o yaml` show the file contents?
 
-![alt text](imges/image-2.png)
+![alt text](images/image-2.png)
 
 ---
 
 ### Task 3: Use ConfigMaps in a Pod
 1. Write a Pod manifest that uses `envFrom` with `configMapRef` to inject all keys from `app-config` as environment variables. Use a busybox container that prints the values.
 
-![alt text](imges/image-5.png)
+![alt text](images/image-5.png)
 
-![alt text](imges/image-3.png)
+![alt text](images/image-3.png)
 
 2. Write a second Pod manifest that mounts `nginx-config` as a volume at `/etc/nginx/conf.d`. Use the nginx image.
 
-![alt text](imges/image-6.png)
+![alt text](images/image-6.png)
 
-![alt text](imges/image-4.png)
+![alt text](images/image-4.png)
 
 3. Test that the mounted config works: `kubectl exec <pod> -- curl -s http://localhost/health`
 
@@ -49,7 +49,7 @@ Use environment variables for simple key-value settings. Use volume mounts for f
 
 **Verify:** Does the `/health` endpoint respond?
 
-![alt text](imges/image-7.png)
+![alt text](images/image-7.png)
 
 ---
 
@@ -62,7 +62,7 @@ Use environment variables for simple key-value settings. Use volume mounts for f
 
 3. Decode a value: `echo '<base64-value>' | base64 --decode`
 
-![alt text](imges/image-8.png)
+![alt text](images/image-8.png)
 
 **base64 is encoding, not encryption.** Anyone with cluster access can decode Secrets. The real advantages are RBAC separation, tmpfs storage on nodes, and optional encryption at rest.
 
@@ -79,7 +79,7 @@ Use environment variables for simple key-value settings. Use volume mounts for f
 
 **Verify:** Are the mounted file values plaintext or base64?
 
-![alt text](imges/image-9.png)
+![alt text](images/image-9.png)
 
 
 ---
@@ -89,17 +89,17 @@ Use environment variables for simple key-value settings. Use volume mounts for f
 
 - `kubectl create configmap live-config --from-literal=message=hello`
   
-![alt text](imges/image-10.png)
+![alt text](images/image-10.png)
 
 2. Write a Pod that mounts this ConfigMap as a volume and reads the file in a loop every 5 seconds
 
-![alt text](imges/image-12.png)
+![alt text](images/image-12.png)
 
-![alt text](imges/image-11.png)
+![alt text](images/image-11.png)
 
 3. Update the ConfigMap: `kubectl patch configmap live-config --type merge -p '{"data":{"message":"world"}}'`
 
-![alt text](imges/image-13.png)
+![alt text](images/image-13.png)
 
 4. Wait 30-60 seconds — the volume-mounted value updates automatically
 
@@ -109,7 +109,7 @@ Use environment variables for simple key-value settings. Use volume mounts for f
 
 5. Environment variables from earlier tasks do NOT update — they are set at pod startup only
 
-- ![alt text](imges/image-14.png)
+- ![alt text](images/image-14.png)
 
 i.e mesage from env is fixed i.e hellow
 
