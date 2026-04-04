@@ -31,6 +31,9 @@
 ### Task 3: Create a Deployment with CPU Requests
 1. Write a Deployment manifest using the `registry.k8s.io/hpa-example` image (a CPU-intensive PHP-Apache server)
 2. Set `resources.requests.cpu: 200m` — HPA needs this to calculate utilization percentages
+
+![alt text](images/image-10.png)
+
 3. Expose it as a Service: `kubectl expose deployment php-apache --port=80`
 
 Without CPU requests, HPA cannot work — this is the most common HPA setup mistake.
