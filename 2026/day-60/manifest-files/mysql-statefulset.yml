@@ -1,0 +1,42 @@
+kind: StatefulSet
+apiVersion: apps/v1
+metadata:
+  name: mysql-statefulset
+  namespace: capstone
+spec:
+  selector:
+    matchLabels:
+      app: mysql-db # has to match .spec.template.metadata.label
+  serviceName: "headless-service" # points to your headdless service
+  replicas: 1 # by default is 1
+  template:
+    metadata:
+      labels:
+        app: mysql-db # has to match .spec.selector.matchLabels
+    spec:
+      containers:
+      - name: mysql-container
+        image: mysql:8.0
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: mysql-vol
+          mountPath: /var/lib/mysql
+        envFrom:
+        - secretRef:
+            name: db-secret
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql-vol
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
