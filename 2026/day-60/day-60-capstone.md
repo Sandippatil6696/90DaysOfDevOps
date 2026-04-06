@@ -24,7 +24,11 @@
    - A `volumeClaimTemplates` section requesting 1Gi of storage, mounted at `/var/lib/mysql`
 4. Verify MySQL works: `kubectl exec -it mysql-0 -- mysql -u <user> -p<password> -e "SHOW DATABASES;"`
 
+![alt text](images/image-20.png)
+
 **Verify:** Can you see the `wordpress` database?
+
+- yes
 
 ![alt text](images/image-2.png)
 
@@ -126,3 +130,4 @@
 ![alt text](images/image-14.png)
 
 4. Reset default: `kubectl config set-context --current --namespace=default`
+
