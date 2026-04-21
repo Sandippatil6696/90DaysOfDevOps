@@ -334,6 +334,8 @@ Explore the imported dashboard. It has dozens of panels covering CPU, memory, di
 
 **Try another one:** Import dashboard ID **193** (Docker monitoring via cAdvisor). Select Prometheus as the datasource and explore container-level stats.
 
+![alt text](images/image25.png)
+
 **Your full `docker-compose.yml` should now have these services:**
 - `prometheus`
 - `node-exporter`
