@@ -1,3 +1,5 @@
+# Day 73 -- Introduction to Observability and Prometheus
+
 1. What is observability? How is it different from traditional monitoring?
    - **Monitoring** tells you _when_ something is wrong (alerts, thresholds)
    - **Observability** tells you _why_ something is wrong (explore, query, correlate)
