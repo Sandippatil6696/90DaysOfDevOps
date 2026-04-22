@@ -223,7 +223,7 @@ docker compose restart grafana
 
 Either way, you should now have two datasources in Grafana: Prometheus and Loki.
 
-![alt text](images/image-1.png)
+![alt text](images/image-15.png)
 
 ---
 
