@@ -314,7 +314,7 @@ Go to Alerts -- they should be in `inactive` state (green). If any condition is 
 
 ![alt text](images/image-8.png)
 
-**Test it:** Stop the notes-app container and watch the `TargetDown` alert fire:
+**Test it:** Stop the notes-app container and watch the `TargetDown` alert fires:
 ```bash
 docker compose stop notes-app
 ```
