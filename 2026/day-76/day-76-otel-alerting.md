@@ -98,17 +98,17 @@ Restart everything:
 ```bash
 docker compose up -d
 ```
-![alt text](images/image-1.png)
+![alt text](imagess/image-1.png)
 
 Verify the collector is running:
 ```bash
 docker logs otel-collector 2>&1 | tail -5
 ```
-![alt text](images/image-3.png)
+![alt text](imagess/image-3.png)
 
 Check Prometheus Targets -- you should now see `otel-collector` as UP.
 
-![alt text](imagesimage-2.png)
+![alt text](imagessimage-2.png)
 
 ---
 
@@ -153,7 +153,7 @@ Check the collector debug output to see the trace:
 ```bash
 docker logs otel-collector 2>&1 | grep -A 10 "test-span"
 ```
-![alt text](images/image.png)
+![alt text](imagess/image.png)
 
 You should see the span details printed to the console. In a production setup, you would send these to a trace backend like Jaeger or Grafana Tempo for storage and visualization.
 
@@ -191,7 +191,7 @@ Now query it in Prometheus:
 ```promql
 test_requests_total
 ```
-![alt text](images/image-4.png)
+![alt text](imagess/image-4.png)
 
 The metric traveled: your curl command -> OTEL Collector (OTLP receiver) -> Prometheus exporter -> Prometheus scraped it. This is how OTEL bridges different telemetry formats.
 
@@ -308,19 +308,19 @@ docker compose up -d prometheus
 
 Check the rules in the Prometheus UI: go to Status > Rules. You should see all five alert rules listed.
 
-![alt text](images/image-5.png)
+![alt text](imagess/image-5.png)
 
 Go to Alerts -- they should be in `inactive` state (green). If any condition is true, the alert moves to `pending`, then `firing` after the `for` duration.
 
-![alt text](images/image-8.png)
+![alt text](imagess/image-8.png)
 
 **Test it:** Stop the notes-app container and watch the `TargetDown` alert fires:
 ```bash
 docker compose stop notes-app
 ```
-![alt text](images/image-6.png)
+![alt text](imagess/image-6.png)
 
-![alt text](images/image-7.png)
+![alt text](imagess/image-7.png)
 
 Wait 1-2 minutes, then check Alerts in the Prometheus UI. Start it back up when done:
 ```bash
@@ -339,7 +339,7 @@ Grafana can also evaluate alerts and send notifications to Slack, email, PagerDu
    - For email: just enter your email address
    - Save
 
-![alt text](images/image-9.png)
+![alt text](imagess/image-9.png)
 
 2. **Create an alert rule in Grafana:**
    - Go to Alerting > Alert rules > New alert rule
@@ -360,7 +360,7 @@ Grafana can also evaluate alerts and send notifications to Slack, email, PagerDu
    - Go to Alerting > Alert rules
    - You should see your rule in Normal, Pending, or Firing state
 
-![alt text](images/image-10.png)
+![alt text](imagess/image-10.png)
 
 **Document:** What is the difference between Prometheus alerts and Grafana alerts? When would you use each?
 
@@ -406,7 +406,7 @@ Verify all services are running:
 docker compose ps
 ```
 
-![alt text](images/image-11.png)
+![alt text](imagess/image-11.png)
 
 All 8 containers should be healthy and running.
 
