@@ -336,6 +336,8 @@ Now compare what you built over days 73-76 with the reference repository.
 | 76 | OTEL Collector, traces, alerting rules |
 | 77 | Full stack integration, unified dashboard |
 
+![alt text](images/Observability-stack-diagram.png)
+
 2. What would you add for production?
    - Alertmanager for routing alerts to Slack/PagerDuty
    - Grafana Tempo for trace storage (replacing debug exporter)
