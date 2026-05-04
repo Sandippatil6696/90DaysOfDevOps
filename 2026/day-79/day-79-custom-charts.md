@@ -556,7 +556,7 @@ helm template my-bankapp bankapp/ \
   --set bankapp.replicaCount=2 \
   --set ollama.enabled=false
 ```
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 
 
