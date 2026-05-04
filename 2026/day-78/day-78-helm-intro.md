@@ -87,7 +87,7 @@ helm repo update
 
 ![alt text](images/image-1.png)
 
-# bitnam does not have mysql, so we need to add the stable repo which has the mysql chart.
+#### bitnam does not have mysql, so we need to add the stable repo which has the mysql chart.
 ```bash
 helm repo add stable https://charts.helm.sh/stable
 helm repo update
@@ -100,7 +100,7 @@ helm search repo bitnami/mysql
 ```
 ![alt text](images/image-2.png)
 
-# Bitnami does not have mysql, so we need to search in the stable repo which has the mysql chart.
+#### Bitnami does not have mysql, so we need to search in the stable repo which has the mysql chart.
 ```bash
 helm search repo stable/mysql
 ```
@@ -224,7 +224,7 @@ Check the revision history:
 ```bash
 helm history bankapp-mysql
 ```
-![alt text](image-15.png)
+![alt text](images/image-15.png)
 
 You should see revision 1 (original) and revision 2 (metrics enabled).
 
