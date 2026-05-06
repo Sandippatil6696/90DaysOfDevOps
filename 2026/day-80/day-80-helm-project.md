@@ -182,9 +182,9 @@ gateway:
 helm install bankapp-dev bankapp/ -f bankapp/values-dev.yaml -n dev --create-namespace
 ```
 
-![alt text](image.png)
+![alt text](images/image.png)
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 ```bash
 # Staging (render to check)
@@ -203,7 +203,7 @@ And in your staging-values.yml have autoscaling is true so in deployment repicas
 autoscaling:
   enabled: true
 ```
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 ```bash
 # Prod (render to check)
@@ -213,7 +213,7 @@ helm template bankapp-prod bankapp/ -f bankapp/values-prod.yaml | grep "replicas
 ```bash
 ### same as above need to set autoscaling to false in prod-values.yaml to check the output of replicas count in deployment.yaml template
 ```
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 Same chart, wildly different deployments.
 
@@ -294,7 +294,7 @@ After deploying, run:
 ```bash
 helm test bankapp-dev -n dev
 ```
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 This hits the Spring Boot health endpoint and confirms the app is running.
 
@@ -306,7 +306,7 @@ I have forwarded the service port to 8082 on localhost for testing:
 kubectl port-forward svc/bankapp-dev-service 8082:8080 -n dev --address 0.0.0.0 
 
 ```
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 ---
 
@@ -323,7 +323,7 @@ helm package bankapp/
 
 This creates `bankapp-0.1.0.tgz`.
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 **Bump the version after changes:**
 Edit `bankapp/Chart.yaml`:
@@ -339,15 +339,15 @@ helm package bankapp/
 
 Now you have `bankapp-0.1.0.tgz` and `bankapp-0.2.0.tgz`.
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 **Install from a package:**
 ```bash
 helm install my-bankapp bankapp-0.2.0.tgz -f bankapp/values-dev.yaml -n bankapp --create-namespace
 ```
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
-![alt text](image-11.png)
+![alt text](images/image-11.png)
 
 **Create a chart repository index** (for sharing via GitHub Pages):
 ```bash
@@ -356,9 +356,9 @@ cp bankapp-*.tgz chart-repo/
 helm repo index chart-repo/ --url https://your-username.github.io/helm-charts
 cat chart-repo/index.yaml
 ```
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
-![alt text](image-10.png)
+![alt text](images/image-10.png)
 ---
 
 ### Task 4: Understand Helm in the AI-BankApp GitOps Pipeline
