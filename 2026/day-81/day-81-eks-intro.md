@@ -39,7 +39,7 @@ git clone -b feat/gitops https://github.com/TrainWithShubham/AI-BankApp-DevOps.g
 cd AI-BankApp-DevOps/terraform
 ls
 ```
-![alt text](image.png)
+![alt text](images/image.png)
 
 ```
 argocd.tf           # ArgoCD Helm release
