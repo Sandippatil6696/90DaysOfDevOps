@@ -205,7 +205,7 @@ Check ArgoCD is running:
 kubectl get pods -n argocd
 kubectl get svc -n argocd
 ```
-![alt text](image-13.png)
+![alt text](images/image-13.png)
 
 Get the ArgoCD admin password:
 ```bash
