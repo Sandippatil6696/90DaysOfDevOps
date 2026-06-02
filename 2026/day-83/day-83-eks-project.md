@@ -138,7 +138,7 @@ Verify:
 ```bash
 kubectl get pods -n monitoring
 ```
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 **Access Grafana:**
 ```bash
