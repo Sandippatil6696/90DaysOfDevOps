@@ -57,7 +57,7 @@ ArgoCD was installed by Terraform on Day 81 (via `terraform/argocd.tf`). Verify 
 ```bash
 kubectl get pods -n argocd
 ```
-![alt text](image.png)
+![alt text](images/image.png)
 
 You should see pods for: `argocd-server`, `argocd-repo-server`, `argocd-application-controller`, `argocd-applicationset-controller`, `argocd-redis`, and `argocd-dex-server`.
 
@@ -77,7 +77,7 @@ export ARGOCD_URL=$(kubectl get svc argocd-server -n argocd \
   -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
 echo "ArgoCD URL: http://$ARGOCD_URL"
 ```
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 Option B -- via port-forward:
 ```bash
@@ -88,7 +88,7 @@ Open `https://localhost:8443` (accept the self-signed certificate). Log in with:
 - Username: `admin`
 - Password: the value from the command above
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 **Install the ArgoCD CLI:**
 ```bash
@@ -104,7 +104,9 @@ sudo mv argocd /usr/local/bin/
 # Verify
 argocd version --client
 ```
-![alt text](image-3.png)
+![alt text](images/image-3.png)
+
+![alt text](images/image-12.png)
 
 Log in via CLI:
 ```bash
@@ -112,7 +114,7 @@ argocd login $ARGOCD_URL --username admin --password <your-password> --insecure
 # or for port-forward:
 argocd login localhost:8443 --username admin --password <your-password> --insecure
 ```
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 **Explore the ArgoCD UI:**
 - **Applications** -- shows all managed applications (empty for now)
@@ -171,6 +173,9 @@ First, make sure the BankApp is NOT already deployed (clean slate):
 kubectl delete namespace bankapp 2>/dev/null
 ```
 
+
+![alt text](images/image-5.png)
+
 **Fork the AI-BankApp repo** -- you need your own copy to push changes later:
 1. Go to https://github.com/TrainWithShubham/AI-BankApp-DevOps
 2. Click "Fork" and create your fork
@@ -203,21 +208,35 @@ spec:
 EOF
 ```
 
+```bash
+kubectl apply -f argocd/application.yml
+```
+![alt text](images/image-6.png)
+
 **Watch ArgoCD deploy the app:**
 - In the ArgoCD UI, click on the `bankapp` application
 - You will see a visual tree of all Kubernetes resources being created
 - Each resource shows its sync and health status (green = healthy, yellow = progressing, red = degraded)
+
+```bash
+To fix tls error and gateway error find the ip of envoy gateway and change to your gateway.yaml file`
+```
+![alt text](images/image-8.png)
 
 Or watch via CLI:
 ```bash
 argocd app get bankapp
 argocd app wait bankapp
 ```
+![alt text](images/image-9.png)
+
+![alt text](images/image-10.png)
 
 Monitor pods coming up:
 ```bash
 kubectl get pods -n bankapp -w
 ```
+![alt text](images/image-7.png)
 
 The deployment order is automatic -- ArgoCD applies all manifests from the `k8s/` directory. MySQL and Ollama start first, then the BankApp's init containers wait for dependencies.
 
@@ -225,8 +244,14 @@ After everything is healthy (5-10 minutes):
 ```bash
 argocd app get bankapp
 ```
+![alt text](images/image-11.png)
+
 
 Status should show: `Health: Healthy`, `Sync: Synced`.
+
+![alt text](images/image-13.png)
+
+![alt text](images/image-14.png)
 
 ---
 
@@ -250,12 +275,19 @@ bankapp (Application)
   |-- Service: bankapp-service
   |-- HPA: bankapp-hpa
 ```
+![alt text](images/image-17.png)
 
 **Click on any resource** to see its details:
 - Pod logs (live streaming)
 - Events
 - YAML manifest (as applied to the cluster)
 - Diff (what changed since last sync)
+
+![alt text](images/image-15.png)
+
+![alt text](images/image-16.png)
+
+
 
 **App Details tab shows:**
 - Source repo and path
@@ -267,6 +299,7 @@ bankapp (Application)
 ```bash
 argocd app history bankapp
 ```
+![alt text](images/image-18.png)
 
 This shows every revision that was synced, when, and the commit SHA.
 
@@ -280,10 +313,12 @@ ArgoCD's `selfHeal: true` means it reverts any manual changes made directly to t
 kubectl scale deployment bankapp -n bankapp --replicas=1
 ```
 
+
 Watch what happens:
 ```bash
 kubectl get pods -n bankapp -w
 ```
+![alt text](images/image-19.png)
 
 Within 3-5 minutes, ArgoCD detects the drift and scales it back to the value defined in Git (4 replicas, or whatever the HPA decides). Check the ArgoCD UI -- you will see a sync event.
 
@@ -291,6 +326,9 @@ Within 3-5 minutes, ArgoCD detects the drift and scales it back to the value def
 ```bash
 kubectl delete configmap bankapp-config -n bankapp
 ```
+![alt text](images/image-20.png)
+
+![alt text](images/image-21.png)
 
 ArgoCD will recreate it from Git within minutes.
 
@@ -299,6 +337,7 @@ ArgoCD will recreate it from Git within minutes.
 kubectl edit configmap bankapp-config -n bankapp
 # Change MYSQL_DATABASE to something wrong
 ```
+![alt text](images/image-22.png)
 
 ArgoCD will overwrite your change with the value from Git.
 
@@ -307,41 +346,3 @@ ArgoCD will overwrite your change with the value from Git.
 **Document:** What happened during each self-healing test? How quickly did ArgoCD revert the changes?
 
 ---
-
-## Hints
-- ArgoCD syncs every 3 minutes by default. You can trigger an immediate sync via the UI ("Sync" button) or CLI (`argocd app sync bankapp`)
-- `selfHeal: true` requires `automated` sync policy -- without automation, ArgoCD only detects drift but does not fix it
-- The ArgoCD Application resource itself lives in the `argocd` namespace, but it deploys resources to the `bankapp` namespace
-- If the app shows `OutOfSync`, it means Git and the cluster differ. Click "Diff" to see exactly what changed
-- ArgoCD only needs read access to your Git repo. It never pushes to Git -- that is the CI pipeline's job
-- The `ServerSideApply=true` option avoids annotation conflicts when multiple tools manage the same resource
-- ArgoCD tracks resources by label -- if you `kubectl apply` a resource directly (outside ArgoCD), it may conflict
-- Reference: https://github.com/TrainWithShubham/AI-BankApp-DevOps (branch: `feat/gitops`) -- `argocd/application.yml`
-
----
-
-## Documentation
-Create `day-84-gitops-argocd.md` with:
-- GitOps principles in your own words
-- GitOps vs traditional CI/CD comparison table
-- The AI-BankApp's GitOps flow diagram
-- Screenshot of the ArgoCD UI showing the bankapp Application resource tree
-- The Application manifest with every field explained
-- Screenshot of ArgoCD after self-healing (sync event showing drift was corrected)
-- What `prune`, `selfHeal`, and `ServerSideApply` do
-
----
-
-## Submission
-1. Add `day-84-gitops-argocd.md` to `2026/day-84/`
-2. Commit and push to your fork
-
----
-
-## Learn in Public
-Share on LinkedIn: "Started the GitOps block today -- deployed the AI-BankApp through ArgoCD on EKS instead of kubectl apply. ArgoCD watches the Git repo and syncs changes automatically. Tested self-healing by manually scaling pods and deleting ConfigMaps -- ArgoCD reverted every change within minutes. The cluster now always matches Git. No more 'who ran kubectl on Friday night?'"
-
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
