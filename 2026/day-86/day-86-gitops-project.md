@@ -84,7 +84,7 @@ https://github.com/TrainWithShubham/AI-BankApp-DevOps -> Fork
   - `DOCKERHUB_USERNAME` -- your DockerHub username
   - `DOCKERHUB_TOKEN` -- the access token from step 2
 
-  ![alt text](image.png)
+  ![alt text](images/image.png)
 
 **4. Update the workflow to push to your DockerHub repo:**
 Edit `.github/workflows/gitops-ci.yml` in your fork:
@@ -92,7 +92,7 @@ Edit `.github/workflows/gitops-ci.yml` in your fork:
 env:
   DOCKERHUB_REPO: <your-dockerhub-username>/ai-bankapp-eks
 ```
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 **5. Update the ArgoCD Application to watch your fork:**
 ```bash
@@ -104,7 +104,7 @@ Edit `k8s/bankapp-deployment.yml`:
 ```yaml
 image: <your-dockerhub-username>/ai-bankapp-eks:latest
 ```
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 Commit and push all changes to your fork's `feat/gitops` branch.
 
@@ -131,17 +131,20 @@ git push origin feat/gitops
 2. The "GitOps CI - Build & Push to DockerHub" workflow should be running
 3. Watch each step: build -> test -> push -> update manifest -> commit
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
-![alt text](image-5.png)
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 **After the pipeline completes:**
 - Check the last commit on your `feat/gitops` branch -- you should see a commit from `github-actions[bot]` with the message `ci: update bankapp image to <sha> [skip ci]`
 - The `k8s/bankapp-deployment.yml` file now has the new image tag
+
+![alt text](images/image-7.png)
+
+![alt text](images/image-5.png)
 
 **Watch ArgoCD sync:**
 ```bash
@@ -155,6 +158,9 @@ Check the pods:
 ```bash
 kubectl get pods -n bankapp -w
 ```
+![alt text](images/image-8.png)
+
+![alt text](images/image-9.png)
 
 You should see a rolling update -- new pods starting with the new image while old pods terminate gracefully.
 
@@ -186,6 +192,9 @@ Status should show `OutOfSync`. With `selfHeal: true`, ArgoCD will correct it wi
 ```bash
 kubectl get pods -n bankapp -w
 ```
+![alt text](images/image-10.png)
+
+![alt text](images/image-11.png)
 
 The replica count will return to 4 (or whatever the manifest specifies).
 
@@ -200,6 +209,7 @@ ArgoCD detects the drift and reverts it to the image tag from Git. The BankApp p
 ```bash
 kubectl delete service bankapp-service -n bankapp
 ```
+![alt text](images/image-12.png)
 
 ArgoCD recreates it from Git.
 
@@ -207,6 +217,7 @@ ArgoCD recreates it from Git.
 ```bash
 argocd app history bankapp
 ```
+![alt text](images/image-13.png)
 
 In the ArgoCD UI, click the application and look at the "Events" tab. Every self-heal action is logged with the before/after state.
 
@@ -258,6 +269,7 @@ argocd app delete monitoring --cascade -y 2>/dev/null
 argocd app delete envoy-gateway --cascade -y 2>/dev/null
 argocd app delete root-app --cascade -y 2>/dev/null
 ```
+![alt text](images/image-14.png)
 
 The `--cascade` flag tells ArgoCD to delete all Kubernetes resources managed by each application.
 
@@ -304,31 +316,3 @@ Confirm deletion (type `yes`). This takes 10-15 minutes.
 - Reference: https://github.com/TrainWithShubham/AI-BankApp-DevOps (branch: `feat/gitops`)
 
 ---
-
-## Documentation
-Create `day-86-gitops-project.md` with:
-- The complete GitOps pipeline diagram (code -> CI -> Git -> ArgoCD -> EKS)
-- GitHub Actions workflow explained step by step
-- Screenshot of GitHub Actions pipeline running successfully
-- Screenshot of the `github-actions[bot]` commit updating the image tag
-- Screenshot of ArgoCD syncing the new revision
-- Drift detection results for all three scenarios
-- The full DevOps pipeline map (connecting all blocks from the challenge)
-- Key takeaways from the 3-day GitOps block
-- Teardown verification screenshots
-
----
-
-## Submission
-1. Add `day-86-gitops-project.md` to `2026/day-86/`
-2. Commit and push to your fork
-
----
-
-## Learn in Public
-Share on LinkedIn: "Completed the GitOps block -- wired the full CI/CD pipeline for the AI-BankApp end to end. Push code to GitHub, Actions builds and pushes the Docker image, updates the Kubernetes manifest in Git, ArgoCD syncs to EKS automatically. Tested drift detection: manually scaled pods, changed images, deleted services -- ArgoCD reverted every change within minutes. This is what production GitOps looks like. Zero manual deployments, full audit trail, self-healing infrastructure."
-
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
